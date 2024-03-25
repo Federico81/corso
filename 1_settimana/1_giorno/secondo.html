@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secondo file</title>
+</head>
+<body>
+    <!-- imparo a mettere i link -->
+    <a href="./index.html" title="Link che porta alla prima pagina" target="_blank">Vai alla prima pagina</a>
+    <!--
+        a sta per anchor 
+        href    è il percorso su cui atterra il link
+        title   è il testo descrittivo del link
+        target  è l'attributo che ci dà la possibilità di aprire il li nk in un altro documento
+    -->
+    <a href="https://www.google.it" target="_blank" title="Link a Google">Link alla home page di Google</a><!-- percorso assoluto completo di https-->
+    <!-- altri link -->
+    <a href="mailto:segreteria@epicode.it">Scrivici</a><br> <!-- link per mandare email -->
+    <a href="tel:+3901234567890">Chiamaci</a><br> <!-- link per aprire una telefonata -->
+    <a href="https://wa.me/+3901234567890?text=Help">Contattaci su whatsapp</a><br> <!-- Wa + testo -->
+    <a href="./pdf/brochure.pdf" target="_blank" title="link a pdf">Leggi la brochure</a> <!-- posso linkare .doc .pdf .zip-->
+    <!-- ancora interna -> ci permette di linkare all'interno di una stessa pagina -->
+    <a href="#correlati">Salta agli articoli correlati</a> <!-- se l'ancora è interna va preceduta dal # -->
+    <p>Lorem ipsum testo lungo che suppongo lunghissimo</p>
+    <p>Lorem ipsum testo lungo che suppongo lunghissimo</p>
+    <p>Lorem ipsum testo lungo che suppongo lunghissimo</p>
+    <p>Lorem ipsum testo lungo che suppongo lunghissimo</p>
+    <p>Lorem ipsum testo lungo che suppongo lunghissimo</p>
+    <p>Lorem ipsum testo lungo che suppongo lunghissimo</p>
+    <a id="correlati"></a>  <!-- questo è il punto di atterraggio / arrivo dell'ancora interna -->
+    <!-- menu di navigazione -->
+    <ul>
+        <li><a href="index.html">Home page</a></li>
+        <li><a href="secondo.html">paginetta coi link</a></li>
+        <li><a href="contatti.html">pagina contatti</a></li>
+        <li><a href="servizi.html">Servizi</a></li>
+    </ul>
+</body>
+</html>

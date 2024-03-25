@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- nel tag <head> metto le informazioni ausiliarie (titolo della pagina, descrizione etc) -->
+    <meta charset="UTF-8"><!-- <meta> è un tag empty cioè a differenza di altri non chiude -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- non esiste </meta> -->
+    <meta name="description" content="Qui andrà la descrizione della mia pagina (ad esempio per google)">
+    <title>La mia prima pagina web</title>
+</head>
+<body>
+    <!--
+        questo è un commento (non viene mostrato dal browser)
+        nel tag body inserisco tutti i tag che voglio che vengano parsati (mostrati a video) dal browser
+        (ovviemante un tag per essere mostrato a video deve essere fuori dal commento)
+    -->
+    <!-- gli spazi tra i tag o tra le righe non influiscono sulla renderizzazione -->
+    <!-- posso scrivere i tag dell'html con spaziature a piacere, con lo scopo di mantenere un codice ordinato -->
+    <h1>Titolo principale</h1>
+    <h2>Titolo secondario</h2>
+    <h3>Altro titolo</h3>
+    <h4>Altro titolo</h4>
+    <h5>Altro titolo</h5>
+    <h6>Altro titolo</h6>
+    <!-- h sta per heading (intestazione). 
+        tutti i tag h sono elementi di blocco -> 
+                                            occupano tutto lo spazio orizzontale
+                                            si posizionano uno sotto l'altro
+        
+    -->
+    <p>Il tag p serve a formattare un paragrafo di testo, anche il tag p è un tag di blocco</p>
+    <p>Se infatti inserisco un secondo paragrafo questo si posizionerà a capo</p>
+    <!-- le liste o elenchi puntati sono di due tipi: ordinate e non ordinate-->
+    <ol type="a"><!-- ordered list cioè lista ordinata -->
+                <!-- con type modifico il valore della lista, i valori possibili sono 1(di default), i, I, a, A -->
+        <li>Primo elemento</li> <!-- list item cioè singolo elemento della lista !molto importante imparare a indentare il codice -->
+        <li>Secondo elemento</li>
+        <li>Terzo elemento</li>
+    </ol>
+    <ul><!-- unordered list cioè lista non ordinata -->
+        <!-- anche a ul posso assegnare valori diversi: circle (cerchietto pieno - di default), disc, square-->
+        <li>Scrivere il codice in visual code
+            <ul type="square">
+                <li>Aggiungo nuovi tag</li>
+                <li>Metto i commenti per ricordarmi meglio</li>
+                <li>Memorizzo, imparo e controllo il codice</li>
+            </ul>
+        </li>
+        <li>Salvare il file</li>
+        <li>Ricaricare il browser per verificare gli aggiornamenti</li>
+    </ul>
+    <!-- description list -->
+    <dl><!-- description list cioè descrizione di lista -->
+        <dt>HTML</dt><!-- desription term -->
+        <dd>Linguaggio di marcatura semantica</dd><!-- description data-->
+        <dt>Css</dt>
+        <dd>Linguaggio di formattazione</dd>
+        <dt>Browser</dt>
+        <dd>Software per la navigazione web</dd>
+    </dl>
+    <!-- importante! i tag hanno caratteristiche di default: colore, dimensione, font, eventuali rientri da sinistra -->
+    <address>Tag semantico: ci dice che in questa porzione di codice ci sono informazioni di contatto</address>
+    <address>Via Milano 1 - 20100 Roma</address><!-- come tutti i tag ha una formattazione di default (in questo caso è corsivo)-->
+    <blockquote cite="https://www.wikipedia.org">tag che racchiude una citazione, con relativo riferimento</blockquote>
+
+    <!-- caratteri speciali -->
+    <!-- si apre & e si chiudono con ; -->
+    <!-- servono, ad esempio, a sostituire particolari diciture che hanno signficato sintattico dentro l'html -->
+    <p>3 è &lt; di 4</p>
+    <p>4 è &gt; di 3</p>
+    <!-- elenco caratteri speciali -> https://corsidia.com/materia/web-design/caratterispecialihtml -->
+    <p>Html &amp; css</p>
+    <p>&quot; questo ad esempio è il doppio apice</p>
+    <p>&apos; questo è l'apice singolo </p> <!-- anche le spaziature all'interno dei testi nei tag non vengono interpretate -->
+    <p>Lo spazio bianco è un carattere &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; speciale</p>
+    <!-- lo spazio bianco è un carattere speciale infatti nbsp new blank space -->
+    <p>&euro; euro &copy; copyright &reg; trademark</p>
+
+    <!-- finora abbiamo usato solo elementi di blocco cioè tag che vanno automaticamente a capo -->
+    <!-- elementi inline sono quelli che si posizionano automaticamente uno accanto all'altro -->
+    <span>Inserisco un testo</span><!-- span è un tag inline, i contenuti si posizionano affiancati-->
+    <span>inserisco un altro testo con il tag span</span>
+    <p>In questo bel paragrafetto metto <b>quattro parole in grassetto</b> a scopo estetico. <!-- <b> sta per bold -->
+        Esiste in fatti anche un <strong>altro modo</strong> di fare i grassetti <!-- strong dice anche che quel contenuto è rilevante --> 
+        e serve anche ai fini dell'indicizzazione sui motori di ricerca.<br> <!-- manda a capo è un tag empty -->
+        Inoltre possiamo mettere anche una parola in <i>corsivo</i> per fini estetici oppure perché è un contenuto <em>importante</em><br>
+        <!-- <i> italic fa il corsivo semplice, <em>enfatizzato fa il corsivo e dice anche che quel contenuto è rilevante -->
+            Questi tag così descritti seguono le regole della W3C aggiornati al <del>2014</del> <ins>2024</ins></p>
+    
+    <!-- altri tag inline-->
+    <p>Questo è un paragrafo inserito in un tag <abbr title="hyper text markup language">html</abbr>
+    grazie al tag <code>&lt;p&gt;</code> posso inserire dei paragrafi. Posso evidenziare dei contenuti anche con <mark>mark</mark><br>
+    Possiamo inserire una citazione anche grazie al tag q <q>Qui andrebbe la mia citazione, q sta per quotation</q>, 
+    volendo terzo modo per inserire citazioni è <cite>inserico la citazione</cite><br>
+    Elenco tag html -> <a href="https://it.semrush.com/blog/lista-tag-html/" target="_blank">su semrush</a> altro elenco più completo -> https://guide.dev2web.org/tutti-i-tag-html/ 
+    </p>
+
+    <!-- altri tag di formattazione -->
+    <p>Questo è un testo <pre>non formattato</pre>. Posso indicare dei tasti della tastiera <kbd>Premere ctrl</kbd> 
+        oppure degli output <samp>f5 per aggiornare</samp></p>
+        <hr><!-- tag empty, sta per horizontal row e inserisce una riga orizzontale -->
+    <p>Quando parleremo di javascript impareremo a usare le <var>variabili</var></p>
+
+
+    <!-- +++++++++++++++++++++++ inserire immagini +++++++++++++++++++++++++ -->
+    <img src="./img/sinner.jpeg" alt="foto di Sinner" width="200"> <!-- dentro a src faccio il percorso relativo -->
+    <!--
+        img è un tag empty, src è attributo necessario -> percorso relativo per arrivare all'immagine
+        alt -> è un testo alternativo che descrive l'immagine. Serve a 1.accessibilità 2.posizionamento
+        width|height -> ci permettono di modificare la dimensione -> non si fa mai (file di solito sono nella dimensione esatta)
+        formati possibili -> jpg, jpeg, png, apng, gif, svg, Webp
+    -->
+    <!-- immagini esterne -->
+    <img src="https://www.ilpost.it/wp-content/uploads/2024/03/25/1711356954-crocus-russia.jpg" alt="Immagine de Il Post" width="200">
+    <!-- img è un tag inline -> le immagini infatti si posizionano una affianco all'altra -->
+
+    <!-- tag semantici per le immagini -->
+    <figure>    <!-- tag semantico che indica la presenza nella porizione di codice di immagini -->
+        <img src="./img/corriere.jpeg" alt="corriere">
+        <figcaption>Con figcaption indico che questa porizione di codice è una didascalia della foto</figcaption>
+    </figure>
+</body>
+</html>

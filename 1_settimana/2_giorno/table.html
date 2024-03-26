@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelle</title>
+</head>
+<body>
+    <table><!-- table è il tag parent (genitore): tutta la mia tabella sarà compresa tra l'apertura e la chiusura di questo tag -->
+        <caption><b>Presenze della classe Epicode FS0324</b></caption><!-- intestazione della tabella -->
+        <tr>
+            <th>Nome</th><!-- table head marca le celle della prima riga-->
+            <th>data</th>
+            <th>Presente|assente</th>
+        </tr>
+        <tr><!-- table row indica la riga di una tabella, è elemento child di table -->
+            <td>Adriano</td><!-- table data indica la singola cella delal riga, è elemento child di tr -->
+            <td>26-03</td>
+            <td>presente</td>
+        </tr>
+        <tr>
+            <td>Alessandro</td>
+            <td>26-03</td>
+            <td>presente</td>
+        </tr>
+        <tr>
+            <td>Andrea</td>
+            <td>26-03</td>
+            <td>presente</td>
+        </tr>
+        <tr>
+            <td colspan="3">Totale 45 presenti</td><!-- colspan unisce in orizzontale le celle -> unisce le colonne -->
+                                                   <!-- rowspan unisce in verticale le celle -> unisce le righe -->
+        </tr>
+    </table>
+    <!--
+        per le tabelle di grandi dimensioni abbiamo a disposizione ulteriori tag
+        thead -> instestazione di una tabella
+        tbody -> corpo della tabella
+        tfoot -> piè pagina della tabella
+    -->
+    <table>
+        <thead>
+            <tr>
+                <th>Competenze</th>
+                <th>Livello</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Html</td>
+                <td>In grande crescita</td>
+            </tr>
+            <tr>
+                <td>Css</td>
+                <td>Da domani</td>
+            </tr>
+            <tr>
+                <td>Javascript</td>
+                <td>Speriamo</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="2">Livello medio: buono</td>
+            </tr>
+        </tfoot>
+    </table>
+    <!-- annidare tabelle -->
+    <table>
+        <tr>
+            <th>Studente</th>
+            <th>Presenze</th>
+        </tr>
+        <tr>
+            <td>Adriano</td>
+            <td>si</td>
+        </tr>
+        <tr>
+            <td>Alessandro</td>
+            <td>
+                <table><!-- table può essere anche child di td -->
+                    <tr>
+                        <td>Dalle 9 alle 10 si</td>
+                    </tr>
+                    <tr>
+                        <td>Dalle 10 alle 11 no</td>
+                    </tr>
+                    <tr>
+                        <td>Dalle 11 alle 13</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

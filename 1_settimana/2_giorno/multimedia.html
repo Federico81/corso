@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multimedia</title>
+</head>
+<body>
+    <!-- audio -->
+    <!--
+    <audio>
+        <source src="./audio/heartbeat.mp3" type="audio/mp3">
+        <source src="./audio/heartbeat.ogg" type="audio/ogg">
+    </audio>
+    <p>lo uso soltanto se per qualche motivo devo caricare più formati dello stesso file</p>
+    -->
+    <audio src="./audio/heartbeat.mp3" controls></audio> <!-- controls  per fare apparire i comandi -->
+    <!--
+        controls -> fondamentale per far apparire play, pause etc
+        autoplay -> fa partire in automatico il contenuto (ormai è quasi impossibile)
+        loop     -> eseguire in loop un audio
+        muted    -> mutare l'audio
+        src      -> percorso del file (fondamentale)
+    -->
+    <!-- video -->
+    <video src="./video/by_night.mp4" controls width="300" poster="./img/epicode.jpeg"></video>
+    <!--
+        autoplay -> fa partire in automatico il contenuto (ormai è quasi impossibile)
+        controls -> fondamentale per far apparire play, pause etc
+        loop     -> eseguire in loop un audio
+        muted    -> mutare l'audio
+        src      -> percorso del file (fondamentale)
+        poster   -> immagine di copertina (immagine che fa da segnaposto)
+        width|height -> stabilisco le dimensioni del player
+    -->
+
+    <!-- incorporo video da siti terzi -->
+    <iframe width="500" height="300" src="https://www.youtube.com/embed/kvpQtfBP_H0?si=4M48C9wqMSbBGh3Z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <!-- incorporo una google maps -->
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2796.1339909120484!2d9.201310375875995!3d45.50738127107473!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c73164a54235%3A0x145297b8ed69b999!2sViale%20Sarca%2C%2073%2C%2020126%20Milano%20MI!5e0!3m2!1sit!2sit!4v1711452710868!5m2!1sit!2sit" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</body>
+</html>

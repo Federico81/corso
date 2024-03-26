@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web semantico</title>
+</head>
+<body>
+<div id="contenitore">
+    <header><!-- intestazione -->
+        <img src="./img/logo.png" alt="Epicodo logo">
+        <form action="#" method="#">
+            <input type="search" name="search" placeholder="Cerca...">
+        </form>
+    </header>
+    <nav><!-- menu di navigazione -->
+        <ul>
+            <li><a href="index.html">Home page</a></li>
+            <li><a href="chi_siamo.html">Chi siamo</a></li>
+            <li><a href="#">I nostri corsi</a>
+                <ul>
+                    <li><a href="#">Base</a></li>
+                    <li><a href="#">Avanzato</a></li>
+                </ul>
+            </li>
+            <li><a href="form.html">Lavora con noi</a></li>
+            <li><a href="#">Contatti</a></li>
+        </ul>
+    </nav>
+    <main><!-- contenuto principale -->
+        <article><!-- articolo / qualcosa che ha senso/significato da solo -->
+            <h2>Titolo del mio articolo</h2>
+            <h3>Sottotitolo del mio articolo</h3>
+            <!-- per generare testi finti: https://it.lipsum.com/ | https://cupcakeipsum.com/-->
+            <p>Chocolate candy canes wafer chocolate bar toffee. Candy canes sugar plum gummi bears sugar plum icing bear claw caramels. Cookie croissant donut jujubes cupcake. Shortbread wafer biscuit soufflé powder chupa chups gingerbread bear claw. Pudding toffee icing liquorice gingerbread chocolate cake lollipop candy canes. Jelly apple pie tootsie roll tiramisu wafer.</p>
+            <p>Icing gummi bears tart marshmallow danish chocolate cake pudding. Candy soufflé jelly cupcake macaroon. Donut shortbread caramels icing ice cream shortbread chocolate chupa chups. Sweet liquorice carrot cake chocolate bar fruitcake bonbon cupcake brownie carrot cake. Powder sesame snaps tart caramels jelly toffee. Bonbon dessert donut chocolate bar lemon drops sesame snaps wafer cake. Chocolate bar marzipan jelly beans carrot cake tiramisu. Lemon drops muffin sugar plum apple pie cookie marzipan ice cream danish. Candy tiramisu tiramisu brownie cupcake candy canes pie sesame snaps. Dragée fruitcake chocolate cake apple pie wafer wafer.</p>
+            <p>Tart chocolate cake sweet roll sweet roll topping topping lollipop. Chupa chups danish oat cake wafer icing tootsie roll. Gummies sweet pudding tootsie roll jelly. Danish jelly beans danish pudding danish. Bear claw carrot cake topping sweet roll candy tootsie roll sweet roll. Marshmallow donut apple pie macaroon pastry pudding bonbon tart.</p>
+        </article>
+        <section><!-- una sezione separata -->
+            <form method="#" action="#">
+                <label for="commento">Lascia il tuo commento</label>
+                <textarea name="commento" placeholder="Commenta"></textarea>
+                <input type="submit">
+            </form>
+        </section>
+        <!-- 
+            main può contenere più articoli e più section
+            section può contenere article ma anche viceverse
+            article e section non sono in rapporto parent/child
+        -->
+    </main>
+    <aside><!-- contenuto secondario -->
+           <!-- lo uso per contenuti ausiliari (banner, articoli correlati, contenuti extra )-->
+        <ul>
+            <li><a href="#" title="titolo del link"><img src="./img/logo.png" alt="logo"></a></li>
+            <li><a href="#" title="titolo del link"><img src="./img/logo.png" alt="logo"></a></li>
+            <li><a href="#" title="titolo del link"><img src="./img/logo.png" alt="logo"></a></li>
+        </ul>
+    </aside>
+    <footer><!-- più di pagina -->
+        <p>Tutti i diritti riservati &copy; | <a href="mailto:info@epicode.com">Scrivici</a></p>
+    </footer>
+</div>
+</body>
+</html>

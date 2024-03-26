@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <form method="get|post" action="#"> <!-- form è il tag parent di tutti i miei campi form -->
+                                        <!-- method indica il modo in cui verranno passati i dati -->
+                                        <!-- action indica che cosa fa il form -->
+        <fieldset>                      <!-- serve a raccogliere un set di campi form -->
+            <legend>Anagrafica</legend> <!-- fornisce una legenda a un particolare set di campi -->
+            <label for="username">Nome utente:</label><!-- etichetta: descrivere i campi (serve a migliorare l'accessibilità) -->
+            <input type="text" name="username" placeholder="username"> <!-- placeholder è un testo segnaposto -->
+            <br>
+            <label for="password">Password:</label>
+            <input type="password" name="password">
+            <br>
+            <label for="email">Inserisci la tuaemail:</label>
+            <input type="email" name="email">
+            <br>
+            <label for="data">Inserisci una data:</label>
+            <input type="date" name="data">
+            <br>
+            <label for="anni">Anni:</label>
+            <input type="number" name="anni" min="0" max="99">
+            <br>
+            <label for="orario">Orario:</label>
+            <input type="time" name="orario">
+            <br>
+            <label for="cv">Carica il curriculum</label>
+            <input type="file" name="cv">
+            <br>
+            <label for="avanzamento_lavoro">Range:</label>
+            <input type="range" name="range" min="0" max="100" value="10" step="5">
+            <br>
+            <label for="nascosto">campo nascosto</label>
+            <input type="hidden" name="nascosto">
+            <!-- altri input type: tel, month, week, image, color -->
+            <br>
+            <label for="autorizzo">Autorizzo al trattamento dei miei dati personali:</label>
+            <input type="checkbox" name="autorizzo" checked> <!-- checked = flag in automatico -->
+            <br>
+            <!-- attributi dei campi -->
+            <label for="utente">Inserisci il tuo utente</label>
+            <input type="text" required> <!-- con required il campo sarà obbligatoria -->
+            <br>
+            <label for="utente_premium">passa a premium</label>
+            <input type="text" placeholder="passa a Premium" disabled> <!-- campo disabilitato -->
+            <br>
+            <label for="punteggio">Risultato votazione</label>
+            <input type="text" readonly value="7">  <!-- readonly il campo è in sola lettura -->
+        </fieldset>
+        <fieldset>
+            <legend>Info ulteriori</legend>
+            <label for="commento">Lascia un commento</label>
+            <textarea name="commento" placeholder="Inserisci il tuo messaggio" rows="5" cols="80"></textarea>
+            <br>
+            <!-- scelte multiple -->
+            <label for="provincia">Scegli la provincia</label>
+            <select name="provincia">
+                <option value="">--</option>
+                <optgroup label="Lombardia">
+                    <option value="MI">Milano</option>
+                    <option value="VA">Varese</option>
+                    <option value="CO">Como</option>
+                </optgroup>
+                <optgroup label="Emilia Romagna">
+                    <option value="BO">Bologna</option>
+                    <option value="RE">Reggio Emilia</option>
+                </optgroup>
+            </select>
+            <br>
+            <!-- scelte multiple altro modo -->
+            <label for="domanda_1">Che cos'è il tag body?</label>
+            <input type="radio" name="domanda_1" value="0"> è un attributo css<br>
+            <input type="radio" name="domanda_1" value="0"> è una variabile js<br>
+            <input type="radio" name="domanda_1" value="1"> è un tag html<br>
+        </fieldset>
+        <button type="submit">Invia il form</button>
+        <button type="reset">Cancella i dati</button>
+        <input type="submit" value="Invia i dati">
+        <input type="reset" value="Cancella tutto">
+    </form>
+</body>
+</html>

@@ -1,0 +1,52 @@
+/* unità di misura */
+p {font-size: 30px;}
+p {font-size: 1em;} /* proporzionale all'elemento parent */
+p {font-size: 1.1rem;} /* proporzionale all'elemento root */
+div {width: 50%; margin-left: 25%;} /* proporzionale all'elemento parent */
+/* vw viewport width -> si riferisce alla larghezza della viewport */
+/* vh viewport height -> si riferisce all'altezza della viewport */
+
+/* esempio */
+p {font-size: 90%}    /* div ~16px -> p -> ~14px */
+p {font-size: 0.8em;} /* div ~16px -> p -> ~12px */
+p {font-size: 0.5rem;}/* body ~16px -> p -> 8px */
+p {font-size:0.9vw}   /* viewport 400px -> p -> 3.6px */
+
+/* colori */
+article p {color: blueviolet;} /* keyword */
+article p {color: #0000ff;} /* esadecimale */
+article p {color: #00f}     /* esa sintetico */
+article p {color: #0f0}
+article p {color: #f00}
+article p {color: rgb(0, 0, 255);} /* rgb (tre valori da 0 a 255) */
+article p {color: rgb(0, 0, 255, 0.5)} /* rgb + canale alpha - opacità - */
+
+/* font */
+section p {font-family: 'Courier New', Courier, monospace;}
+/* Arial, Verdana, Helvetica, Georgia, Times new roman, Tahoma */
+section p {  font-family: "Open Sans", sans-serif;
+}
+
+/* formattazione di testi */
+#secondo {
+    font-size: 1.1em; /* px, rem */
+    font-style: italic; /* corsivo, valore di default: normal */
+    font-weight: bold; /* grassetto, valore di default: normal */
+    line-height: 1.5; /* valore da zero in su */
+}
+div p {
+    color: #00f;
+    text-align: justify; /* left, right, center */
+    text-indent: 2em; /* rientro della prima linea */
+    text-transform: uppercase; /* lowercase */
+}
+/* aggiungere ombre */
+div h1 {
+    text-shadow: 4px 4px 12px #666 ;
+    /*
+    1ò valore -> spostamento orizzontale
+    2ò valore -> spostamento verticale 
+    3ò valore -> spread sfocatura
+    4ò valore -> colore
+    */
+}

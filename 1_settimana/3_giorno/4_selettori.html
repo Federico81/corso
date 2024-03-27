@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selettori</title>
+    <style>
+        /*
+            .intro  -> formatta una classe intro
+            #first  -> formatta l'id first
+            *       -> tutti gli elementi
+            p       -> tutti i paragrafi
+            p.intro -> tutti i paragrafi con classe intro   
+            div, p  -> tutti i div e tutti i paragrafi
+            div p   -> tutti i paragrafi che sono contenuti in div
+            div > p -> tutti i paragrafi dove div è un genitore
+            div + p -> tutti i paragrafi piazzati immediatamente dopo un div
+            p ~ ul  -> tutte le ul precedute da un p
+            a[target=_blank]  -> solo i link con target=_blank
+            a[title~=esterno] -> solo i link che hanno la parola "esterno" nel titolo
+            a[href^="https"]  -> solo il link dove href inizia con https
+
+            https://www.w3schools.com/cssref/css_selectors.asp
+        */
+        p.intro {background-color: green;}
+        div > p {background-color: yellow;}
+        div + p {background-color: brown;}
+        p ~ ul  {background-color: blue;}
+        a[target=_blank] {color: #000;}
+        a[title~=esterno] {font-style: italic;}
+        a[href^="https"] {color:red}
+    </style>
+</head>
+<body>
+    <div>
+        <h2>Sono Federico</h2>
+        <p>Vivo a Milano</p>
+    </div>
+    <ul>
+        <li>Lista 1 </li>
+        <li>Lista 1 </li>
+    </ul>
+    <div>
+        <span><p>E' un buon anno per lo sport</p></span>
+    </div>
+    <p>Ma solo per quello</p>
+    <ul>
+        <li>Lista 2 </li>
+        <li>Lista 2 </li>
+    </ul>
+    <p class="intro">Secondo me</p>
+    <a class="intro" href="#" title="#">Questo no</a><br>
+    <a href="https://www.google.it" target="_blank">Google.it</a><br>
+    <a href="https://www.corriere.it" title="link esterno">Corriere.it</a>
+</body>
+</html>

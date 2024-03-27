@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Child</title>
+    <style>
+        p:first-child {background-color: yellow;}     /* formatto solo i primi "figli" */
+        p:last-child {background-color: red;}         /* l'ultimo */
+        li:nth-child(2) {color: blue;}                /* nth -> ennesimo */   
+        :nth-of-type(3) {background-color: black;}    /* non c'è tag quindi qualsiasi terzo */
+        tr:nth-child(even) {background-color: #ccc;}  /* solo i pari */
+        tr:nth-child(odd) {background-color: #fff;}   /* solo i dispari */
+        li:nth-child(3n+0) {background-color: violet} /* ogni terzo quindi terzo, sesto, nono...*/
+                                                        /* se scrivessi ad esempio (3n-1) sarebbe secondo, quinto, ottavo... */
+    </style>
+</head>
+<body>
+    <p>Questo paragrafo è first child di body</p>
+    <p>Questo no</p>
+    <p>Terzo paragrafo</p>
+    <p>Quarto paragrafo</p>
+    <div>
+        <p>Questo paragrafo è first child di div</p>
+        <p>Questo no</p>
+    </div>
+    <ul>
+        <li>primo item</li>
+        <li>secondo item</li>
+        <li>terzo item</li>
+        <li>quarto item</li>
+        <li>quinto item</li>
+        <li>sesto item</li>
+        <li>settimo item</li>
+    </ul>
+    <table>
+        <tr><td>Tommaso</td><td>Brichetti</td></tr>
+        <tr><td>Luca</td><td>Trimboli</td></tr>
+        <tr><td>Ruben</td><td>Signò</td></tr>
+        <tr><td>Adiener</td><td>Lopez</td></tr>
+        <tr><td>Chiara</td><td>Soddu</td></tr>
+        <tr><td>Daniele</td><td>Terracciano</td></tr>
+    </table>
+</body>
+</html>

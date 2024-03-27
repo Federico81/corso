@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo classi</title>
+    <style>
+        a {text-decoration: none;}
+        a:hover {text-decoration: underline; font-weight: bold} /* al passaggio sopra del mouse */
+        a:visited {color:#000}              /* se quel link è già stato visitato cambio colore */
+        a:link {color:blue}                 /* link non visitato */
+        p:empty {width: 100px; height: 20px; background-color: red;} /* formatto solo i paragrafi vuoti */
+        :not(p) {color: #0f0;}              /* tutto ciò che non è un paragrafo diventa verde */
+        p {color: #000;}                  /* dico che il paragrafo è nero altrimenti l'altra istruzione è l'unica */
+        :target {background-color: beige; border:2px solid gray} /* evidenzio l'ancora attiva */
+    </style>
+</head>
+<body>
+    <h2>Titolo</h2>
+    <a href="https://epicode.com/">Epicode</a><br>
+    <p></p>
+    <p>Un paragrafo</p>
+    <p>Un altro paragrafo</p>
+    <div>Un contenuto direttamente in un div</div>
+    <hr>
+    <p><a href="#news1">Vai al contenuto 1</a></p>
+    <p><a href="#news2">Vai al contenuto 2</a></p>
+    <p>Cliccando sui link con un selettore :target evidenzio il contenuto ancorato</p>
+    <p id="news1"><b>Contenuto 1</b></p>
+    <p id="news2"><b>Contenuto 2</b></p>
+</body>
+</html>

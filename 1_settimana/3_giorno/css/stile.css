@@ -1,0 +1,18 @@
+/* commento css */
+/* sintassi -> selettore {proprietà:valore; proprietà: valore} */
+* {font-style:italic} /* selettore universale */
+p {font-size: 20px;} /* selettore base */
+span {font-weight: bold; color:red}
+ul, ol {margin-left: 30px;} /* raggruppo i selettori */
+p strong {font-size: 22px;} /* selettore discendente */
+/* non tutti i tag strong ma solo quelli contenuti in un tag p */
+
+#titolo_principale {
+    font-size: 60px;
+    color:red;
+    text-decoration: underline;
+}
+
+.autore { color: gray; font-size: 11px;}
+.blu {color: blue;}
+.maiuscolo {text-transform: uppercase;}

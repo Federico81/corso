@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box shadow</title>
+    <style>
+        #esempio1, #esempio2, #esempio3 {width: 1200px; margin: 30px; padding: 10px; border:1px solid #000}
+        #esempio1 {box-shadow: 5px 10px;} /* ombra con due valori: 1.spostamento orizzontale 2.spostamento verticale */
+        #esempio2 {box-shadow: 5px 20px 10px #00f} /* terzo valore sfocatura, quarto valore colore */
+        #esempio3 {background-image:url(./img/mare.jpeg); background-repeat: no-repeat;}
+        /* 
+        background-size: auto    -> mostra l'immagine di sfondo alla sua dimensione originale
+        bacground-size: cover    -> fa un resize per occupare tutto il contenitore (taglia, stretch)
+        background-size: contain -> fa il resize (stretch) 
+        */
+        /* opacità */
+        img {width: 300px; opacity: 0.5; } /* valore di default dell'opacità è 1. Valori possibili tra 0 e 1 */
+        img:hover {opacity: 1;}
+        .first, .second, .third, .fourth {background-color: green; padding: 10px; margin: 0; width: 200px;}
+        .first {opacity: 0.3;}
+        .second {opacity: 0.6;}
+        .third {opacity: 0.8;}
+    </style>
+</head>
+<body>
+    <h2>Proprietà box shadow</h2>
+    <div id="esempio1">Un div con l'ombra, il primo valore rappresenta lo spostamento orizzontale, il secondo quello verticale</div>
+    <div id="esempio2">Un div con un ombra colorata e sfumata</div>
+    <div id="esempio3"> Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore  </div>
+    <h2>Opacità</h2>
+    <img src="./img/mare.jpeg" alt="mare">
+    <div class="first"><p>Opacity 0.3</p></div>
+    <div class="second"><p>Opacity 0.6</p></div>
+    <div class="third"><p>Opacity 0.8</p></div>
+    <div class="fourth"><p>Opacity 1 (default)</p></div>
+    <!-- opacity -> tutto background e foreground (quello che scrivo sopra)
+        background-color(r,g,b,a) -> posso gestire l'opacità solo dello sfondo 
+                                  -> mettendo un valore da 0 a 1 nel canale alpha  
+    -->
+</body>
+</html>

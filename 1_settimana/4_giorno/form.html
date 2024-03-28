@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        label {width: 100px; display: block;}
+        input[type=text]:enabled {background-color: aquamarine;}
+        input[type=text]:disabled {background-color: #ccc;}
+        ::placeholder {color:red} /* pseudo elemento */
+        input:checked {margin-left: 30px;}
+        input:in-range{border:2px solid green}
+        input:out-of-range{border:2px solid red}
+        input:valid {background-color: darkcyan; border:1px solid green}
+        input:invalid {background-color: darkred; border:1px solid red}
+        input:required {border:3px solid #f00}
+        /* per aggiungere qualcosa (ad esempio ::after) selettore::after {content: " *campo obbligatorio"} 
+            https://www.w3schools.com/cssref/sel_after.php
+        */
+    </style>
+</head>
+<body>
+    <form action="#" method="#">
+        <label>Nome</label><input type="text" placeholder="Nome"><br>
+        <label>Cognome</label><input type="text" placeholder="Cognome"><br>
+        <label>Punteggio</label><input type="text" disabled placeholder="99"><br>
+        <input type="radio" value="M" name="gender" checked>Maschio<br>
+        <input type="radio" value="F" name="gender">Femmina<br>
+        <input type="number" min="18" max="44" value="43"><br>
+        <input type="email" value="support@epicode.it">
+        <input type="text" required>
+        <input type="submit">
+    </form>
+</body>
+</html>

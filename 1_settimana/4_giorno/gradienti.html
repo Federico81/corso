@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradienti</title>
+    <style>
+        #grad1, #grad2, #grad3, #grad4, #grad5 {height: 100px; width: 400px; margin: 10px; } 
+        #grad1 {background-image: linear-gradient(red, black);}                 /* top -> bottom */
+        #grad2 {background-image: linear-gradient(to right, red, black);}       /* verso destra */
+        #grad3 {background-image: linear-gradient(to bottom right, red, black);}/* verso basso a destra */
+        #grad4 {background-image: linear-gradient(to right, violet, red, orange, yellow, green, blue, indigo);}
+        #grad5 {background-image: repeating-linear-gradient(45deg, red 0px, red 10px, red 10px, yellow 10px, yellow 20px)}
+        /* gradienti complessi -> https://cssgradient.io/ */
+    </style>
+</head>
+<body>
+    <div id="grad1"></div>
+    <div id="grad2"></div>
+    <div id="grad3"></div>
+    <div id="grad4"></div>
+    <div id="grad5"></div>
+</body>
+</html>

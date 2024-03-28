@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overflow</title>
+    <style>
+        /* overflow */
+        div.ex1, div.ex2, div.ex3, div.ex4 { background-color: aquamarine; width: 110px; height: 110px; margin: 10px;}
+        div.ex1 { overflow: scroll;} /* aggiunge la scroll */
+        div.ex2 { overflow: hidden;} /* nasconde il testo che eccede */
+        div.ex3 { overflow: auto;}   /* aggiunge la scroll solo se necessaria */
+        div.ex4 { overflow: visible;}/* il testo che eccede è visibile [default] */
+        /* word-break */
+        p {width: 120px; border: 1px solid #000;}
+        .uno {word-break: normal;}      /* la parola eccede il contenitore */
+        .due {word-break: keep-all;}    /* la parola va a capo solo se ci sono dei trattini */
+        .tre {word-break: break-all;}   /* la parola va a capo sempre */
+        /* word-wrap -> 
+            word-wrap:normal        valore di default non spezza le parole che eccedono
+            word-wrap:break-word    spezza la parola che eccede
+        */
+        .quattro {word-wrap: break-word;}
+    </style>
+</head>
+<body>
+    <h1>Proprietà Overflow</h1>
+    <h2>Overflow: scroll</h2>
+    <div class="ex1">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat</div>
+    <h2>Overflow: hidden</h2>
+    <div class="ex2">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat</div>
+    <h2>Overflow: auto</h2>
+    <div class="ex3">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat</div>
+    <h2>Overflow: visible</h2>
+    <div class="ex4">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat</div>
+    <br><br><br><br><br><br><br>
+    <hr>
+    <h1>Word-break</h1>
+    <p class="uno">Precipitevolissimevolmente è la parola più lunga dell'alfabeto italiano</p>
+    <p class="due">Precipitevolissimevolmente è la-parola-più-lunga-dell'alfabeto-italiano</p>
+    <p class="tre">Precipitevolissimevolmente è la parola più lunga dell'alfabeto italiano</p>
+    <p class="quattro">Precipitevolissimevolmente è la parola più lunga dell'alfabeto italiano</p>
+
+</body>
+</html>

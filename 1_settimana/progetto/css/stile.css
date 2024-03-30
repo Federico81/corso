@@ -1,0 +1,162 @@
+body {
+  color: #393d41;
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.65;
+  text-align: center;
+}
+
+/* Tipografia*/
+h1,
+h2 {
+  color: #25a2c3;
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.5;
+  margin: 0 0 0.5em 0; /* margini inferiori, uso la scrittura completa così eventualmente correggo dei valori */
+}
+
+p {
+  margin: 0 0 1.5em 0; /* margini inferiori, uso la scrittura completa così eventualmente correggo dei valori */
+}
+
+blockquote {
+  font-style: italic;
+  font-size: 0.85em;
+  margin: 1.7em 0;
+}
+
+figcaption {
+  font-size: 0.7em;
+}
+
+cite {
+  font-size: 1.5em;
+}
+
+/* Header */
+header {
+  background-color: black;
+  padding: 1.5em;
+}
+
+#logo {
+  display: inline-block; /* come inline gli elementi si affiancano, come block posso dimensionarli e aggiungere spaziature */
+  width: 40%;            /* uso width per dimensionare contenuti nel mobile non i contenitori */
+  height: auto;
+}
+
+/* SECTION */
+section {
+  padding: 3em 1.3em 2em;
+}
+
+section,
+section div *:last-child { /* solo l'ultimo non tiene margine sotto perché non serve */
+  margin-bottom: 0;
+}
+
+#banner {
+  background-image: url(../images/banner.jpg);
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+
+#banner h1 {
+  font-size: 2.2rem;
+  line-height: 1;
+}
+
+#banner p {
+  margin-bottom: 1.75em;
+}
+
+#banner .pulsante {   /* formattazione completa del link "partiamo" */
+  font-size: 0.9rem;
+  background-color: #f04c2f;
+  border-radius: 4px;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  padding: 0.8em 2.2em;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+#benefits div {
+  margin-bottom: 1.4em;
+}
+
+#benefits .fotoCentrale img {
+  border-radius: 50%; /* arrotondo la foto */
+  width: 80%;
+  height: auto; /* proporziono all'altezza */
+}
+#testimonial {
+  background-color: #e22d0e;
+  color: white;
+}
+
+#testimonial h2 {
+  color: white;
+  font-size: 2rem;
+}
+
+/* Schede */
+
+.scheda {
+  border-radius: 4px;
+  border: solid 1px #dee1e3;
+  margin-bottom: 2em;
+  padding-bottom: 1.5em;
+  font-size: 1rem;
+}
+
+.scheda img {
+  display: inline-block;
+  width: 100%;
+}
+
+.scheda .wrapper {
+  padding: 0.8em; /* lo uso per distanziare il contenitore dal contenuto */
+}
+
+/* Footer */
+footer {
+  padding: 2em 1em;
+  background-color: #25a2c3;
+  color: #c8e7f0;
+}
+
+footer h2 {
+  color: #fff;
+  font-size: 2rem;
+}
+
+footer .fas {
+  color: white; /* colore delle icone font-awesome */
+}
+
+footer a {
+  color: #c8e7f0;
+}
+
+footer ul li {
+  font-size: 0.9em;
+  list-style: none;
+}
+
+footer address {
+  margin-bottom: 1.5em;
+}
+
+footer .copyright {
+  display: inline-block;
+  font-size: 0.75em;
+  padding: 2em 0;
+  text-align: center;
+  border-top: 1px solid white;
+}

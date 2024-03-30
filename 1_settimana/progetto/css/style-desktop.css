@@ -1,0 +1,192 @@
+body {
+  color: #393d41;
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.65;
+  text-align: center;
+}
+
+/* Tipografia*/
+h1,
+h2 {
+  color: #25a2c3;
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.5;
+  margin: 0 0 0.5em 0;
+}
+
+p {
+  margin: 0 0 1.5em 0;
+}
+
+blockquote {
+  font-style: italic;
+  font-size: 0.85em;
+  margin: 1.7em 0;
+}
+
+figcaption {
+  font-size: 0.7em;
+}
+
+cite {
+  font-size: 1.5em;
+}
+
+/* Header */
+header {
+  background-color: black;
+  padding: 1.5em 3em;
+  text-align: left; /* sposto il testo a sinistra */
+}
+
+#logo {
+  display: inline-block;
+  height: 56px; /* dimensiono height anziché width */
+}
+
+/* SECTION */
+section {
+  padding: 6em 3em;
+}
+
+section,
+section div *:last-child {
+  margin-bottom: 0;
+}
+
+#banner {
+  background-image: url(../images/banner.jpg);
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  padding-block: 22vh; /* dimensione relativa alla viewport */
+  padding-inline: 25vw; /* dimensione relativa alla viewport */
+}
+
+#banner h1 {
+  font-size: 2.2rem;
+  line-height: 1;
+}
+
+#banner p {
+  margin-bottom: 1.75em;
+}
+
+#banner .pulsante {
+  font-size: 0.9rem;
+  background-color: #f04c2f;
+  border-radius: 4px;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  padding: 0.8em 2.2em;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+#benefits div {
+  display: inline-block; /* li considero elementi inline */
+  text-align: left;
+  vertical-align: middle; /* allineamento verticale */
+  padding-inline: 2em;
+}
+
+#benefits div.content {
+  width: 500px; /* non sono più width 100% (default) */
+}
+
+#benefits p {
+  margin-bottom: 1.4em;
+}
+
+#benefits .foto img {
+  border-radius: 50%;
+  width: 500px;
+  height: auto;
+  margin-block: 1.4em;
+}
+
+#testimonial {
+  background-color: #e22d0e;
+  color: white;
+}
+
+#testimonial blockquote {
+  font-size: 1.5em;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+#testimonial h2 {
+  color: white;
+  font-size: 2rem;
+}
+
+/* Schede */
+
+.scheda {
+  display: inline-block; /* li considero elementi inline */
+  vertical-align: top;
+  border-radius: 4px;
+  border: solid 1px #dee1e3;
+  margin-bottom: 2em;
+  padding-bottom: 1.5em;
+  font-size: 1rem;
+  max-width: 400px; /* larghezza massima */
+  margin-inline: 1em;
+}
+
+.scheda img {
+  display: inline-block;
+  width: 100%;
+  min-height: 300px; /* altezza */
+  max-height: 300px;
+  object-fit: cover; /*https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit */
+  object-position: bottom;
+}
+
+.scheda .wrapper {
+  padding: 0.8em;
+}
+
+/* Footer */
+footer {
+  padding: 3em 1em;
+  background-color: #25a2c3;
+  color: #c8e7f0;
+}
+
+footer h2 {
+  color: #fff;
+  font-size: 3rem;
+}
+
+footer .fas {
+  color: white;
+}
+
+footer a {
+  color: #c8e7f0;
+}
+
+footer ul {
+  display: inline-block;
+  text-align: left;
+}
+
+footer ul li {
+  font-size: 0.9em;
+  list-style: none;
+}
+
+footer .copyright {
+  font-size: 0.75em;
+  margin-top: 2em;
+  padding-top: 2em;
+  text-align: center;
+  border-top: 1px solid white;
+}

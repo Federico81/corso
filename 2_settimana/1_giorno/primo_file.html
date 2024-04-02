@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primo file js</title>
+</head>
+<body>
+    <!-- come inserire javascript in una pagina -->
+    <h2>Inserisco codice js inline</h2>
+    <p>Posso inserire delle istruzioni javascript direttamente in un elemento HTML,
+        ad esempio assegnandolo a un attributo che rappresenta un evento (qualcosa che succede)
+    </p>
+    <button type="button" onclick="alert('Ciao!')">Cliccami</button>
+    <!-- 
+        abbiamo assegnato all'attributo onlick dell'elemento button la stringa alert('ciao!') 
+        l'attributo onclick rappresenta l'evento del click sul pulsante (quando clicco -> fai qualcosa)
+        in corrispondenza dell'evento (onclick) viene analizzato il codice js assegnato (alert('ciao!'))
+        alert è una keyword che mostra un box popup con la scritta (in questo caso la scritta ciao)
+        le keyword sono un set di parole "riservate" che hanno signficati sintattici nel linguaggio javascript
+    -->
+    <p>Altro approccio per inserire codice inline, ma è valido solo per i link</p>
+    <a href="javascript:alert('ciao!')">Cliccami</a>
+    <!--
+        In questo caso indichiamo al browser di interpretare il link come la richiesta di esecuzione di una porzione di codice javascript
+        nello specifico stiamo dicendo: non aprire un link (né invia una mail né fai partire una telefonata) -> MA esegui il codice
+    -->
+
+    <h2>Inserisco blocchi di codice javascript</h2>
+    <p><strong>Pro</strong>: nel caso in cui abbiamo poco codice javascript lo metto subito in relazione con i tag html con cui
+    deve interagire</p>
+    <p><strong>Contro</strong>: nel caso - comune - in cui il codice js sia minimamento complesso (variabili, funzioni, oggetti) non 
+    risultato comodo.</p>
+    <script>
+        alert('ciao!')
+    </script>
+    <!-- Il parser html del browser esamina la pagina, riconosce il tag <script> e passa il contenuto all'engine js che lo esegue -->
+    <p><code>Tag head o tag body?</code> primo ordine di considerazioni: performance<br>
+    secondo ordine di considerazioni -> che il tag html su cui js interagisce sia già stato parsato (letto e quindi disponibile)
+    -> questo spiega perché tante volte troviamo gli script in fondo alla pagina prima della chiusura di <code>&lt;/body&gt;</code>
+    </p>
+
+    <h2>Inserisco javascript in un file esterno</h2>
+    <script src="./js/scripts.js"></script>
+    <p>Approccio più consigliato. Importante la separazione tra marcatura (che cos'è) | formattazione (com'è) | programmazione (cosa fa)<br>
+    grande vantaggio dato dalla separazione del codice. Uso il percorso relativo, ho collegato il file prima della chiusura di <code>&lt;/body&gt;</code></p>
+    <!--<script src="https://www.mioserver.com/js/libreria.js"></script> posso collegare file js esterni -->
+
+    <!-- +++++++++++++++++++++ Console +++++++++++++++++++++ -->
+    <p>La console è uno strumento fondamentale per scrivere codice javascript (in qualsiasi linguaggio di programmazione)</p>
+    <p>La console ci permette di fare il debug cioè di controllare il flusso del nostro codice</p>
+    <p>Spesso la console si usa per tenere traccia dell'evoluzione del programma o per verificare valori e trovare errori</p>
+    <p>per accedere alla console dal browser -> tasto destro -> ispeziona -> console</p>
+    <script>
+        // console.log("ciao mondo");
+        var a = 'pluto';
+        console.log('a è uguale a '+a);
+
+        let numero1 = 5;
+        let numero2 = 7;
+        console.log(numero1 + numero2); // 12
+        console.log(numero2 - numero1); // 2
+        console.log(numero2 + 4);       // 11
+    </script>
+
+</body>
+</html>

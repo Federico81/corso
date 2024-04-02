@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipi di dati</title>
+</head>
+<body>
+    <h2>Tipi di dati</h2>
+    <p>Javascript prevede cinque tipi di dati <strong>primitivi</strong>: numeri, stringhe, booleani, null, undefined<br>
+    e un tipo di dato <strong>complesso</strong>: gli oggetti</p>
+    <p>Qualsiasi altro elemento previsto nel linguaggio js (array, funzioni) sono tipi di dati complessi</p>
+    <p>Negli oggetti noi possiamo inserire delle proprietà (coppie attributo/valore) e/o metodi (funzioni)</p>
+
+    <h3>Tipo di dato stringa</h3>
+    <p>E' una sequenza di caratteri delimitata da apici "" oppure '', non c'è regola su che delimitatore usare,
+        unica regola: delimitatore iniziale e finale devono essere uguali. "Questo è una 'stringa'", esiste anche la stringa vuota ""<br>
+        Per inserire caratteri speciali nelle stringe -> \<br>
+        "Ieri pioveva.\nOggi c'è il sole" -> \n inserisce un ritorno a capo<br>
+        'l\'altro ieri' -> il carattere che segue \ viene considerato carattere normale
+    </p>
+
+    <h3>Tipo di dato numerico</h3>
+    <p>Senza apici. Esiste un solo tipo di dato per tutto (interi, decimali, negativi)</p>
+    <script>
+        let interoPositivo = 123;   // niente apici! nè singoli nè doppi
+        let zero = 0;
+        let interoNegativo = -12;   // intero negativo
+        let numeroDecimale = 0.234; // il . fa da separatore per il valore decimale
+        // NaN not a number -> valore speciale di javascript che indica un valore numerico non definito
+        let somma = NaN;
+    </script>
+    <p><b>Javascript è un linguaggio a tipizzazione debole -> non c'è controllo sul tipo di dato</b></p>
+
+    <h3>Tipo di dato booleano</h3>
+    <p>Ha solo due valori possibili: true | false</p>
+
+    <h3>tipo di dato null</h3>
+    <p>Prevede un solo valore possibile: null -> non rientra nei precedenti tipi di dato</p>
+    <script>
+        let x = null;   // null è diverso da stringa vuota "", è diverso da 0
+    </script>
+
+    <h3>tipo di dato undefined</h3>
+    <p>Prevede un solo valore possibile: undefined. Rappresenta un valore che non esiste, non ha assegnato nessun valore (nemmeno null!)</p>
+    <script>
+        var miaVariabile;           // undefined
+        var miaVariabile = 1;       // tipo di dato numerico
+        var miaVariabile = null;    // posso riscrivere perché la tipizzazione in js è debole -> posso cambiare tipo di dato
+        var miaVariabile = "pippo"; // stringa
+        var miaVariabile = "123";   // stringa
+        var miaVariabile = true;    // ultimo valore -> valore assegnato
+    </script>
+</body>
+</html>

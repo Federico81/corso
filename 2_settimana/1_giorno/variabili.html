@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variabili</title>
+</head>
+<body>
+    <h2>Le variabili</h2>
+    <p>Servono per memorizzare dei valori</p>
+    <p>Ogni variabile è identificata da un nome che segue alcune regole:</p>
+    <ul>
+        <li>niente spazi, niente trattini -, niente caratteri speciali (anche ? oppure .)</li>
+        <li>deve iniziare con una lettera, sono ammessi anche underscore _ e dollare $</li>
+        <li>sono case sensitive</li>
+        <li>non può iniziare con un numero</li>
+        <li>non deve mai coincidere con le keywords di javascript (if, else, switch, true, false, return)</li>
+    </ul>
+    <script>
+        // esempi sulle regole di naming delle variabili
+        // keyword per memorizzare dei valori -> var, let, const
+        /*
+        var DeAmbrosis      v -> camel case sostituisco quello che sarebbe lo spazio bianco con la maiuscola della seconda parola
+        var De_Ambrosis     v
+        var De Ambrosis     x
+        var deAmbrosis      v
+        var Deambrosis      v
+        var 1DeAmbrosis     x
+        var De-Ambrosis     x
+        var DeAmbrosis1     v
+        */
+    </script>
+    <h3>Dichiarazione implicita delle variabili</h3>
+    <p>Non è obbligatorio dichiarare le variabili, cioè fare un'operazione esplicita di creazione<br>
+    quando c'è l'identificatore = l'engine crea implicitamente la variabile se non esiste già</p>
+    <script>
+        var miaVariabile;
+        // dichiaro un variabile (a cui posso contestualmente anche assegnare un valore)
+        // quando dichiaro una variabile stabilisco uno scope
+        // lo scope è l'ambito di accessibilità della variabile (cioè in che punto del codice posso usare i valori memorizzati)
+        variabile = 3;
+        // una variabile non dichiarata si crea al primo utilizzo ed è accessibile ovunque nello script
+        // sconsigliato: quando il codice diventa complesso può succedere di usare in punti diversi variabili con lo stesso nome
+        // -> genere comportamenti imprevisti -> dichiariamo sempre una variabile con la suq keyword
+    </script>
+
+    <h3>Var, let, const</h3>
+    <p>var è la prima keyword creata da javascript per definire una variabile, var è accessibile in qualunque parte dellos cript</p>
+    <p>let è stata introdotto da EcmaScript 6, è accessibile solo in un determinato ambito (scope) delimitato da un blocco di codice</p>
+    <p>Un blocco di codice javascript è una serie di istruzioni delimitata da  { .... blocco di codice .... }</p>
+    <p>const è stato introdotto da EcmaScript 6 -> istruisce l'engine che il valore assegnato non è modificabile</p>
+    <script>
+        const PIGRECO = 3.14;   // garantisce l'utilizzo in sola lettura del valore
+        // var pigreco = 3.14;  // modificabile, la prassi vuole che si scriva in maiuscolo quando uso const (valore non modificabile)
+                                // le keyword var e let garantiscono l'accesso in scrittura e quindi di sovrascrivere i valori
+                                // const non posso riassegnare valori
+        const PI = 3.1494;      // se provo a riassegnare il valore mi restituisce errore
+        // PI = 3.15;       // errore
+        // PI = PI + 10;    // errore
+
+        var x = 10;    
+            {
+                let x = 2;  // qui x è uguale a 2
+            }
+        // se richiamo qua la x -> qui il valore sarà 10 -> perché let (come const) vale solo all'interno del blocco di codice
+    </script>
+
+    <h3>Strict mode</h3>
+    <p>E' una opzione di controllo del codice, EcmaScript 5 -> se viene dichiarato lo strict mode javascript viene eseguito
+        usando regole più stringenti -> ad esempio se una variabile non viene dichiarata ci viene mostrato un errore
+        -> se dichiariamo lo strict mode -> regole meno permissive -> stile di programmazione più strutturato
+    </p>
+    <script>
+        "use strict"    // dicitura per abilitare lo strict mode
+    </script>
+</body>
+</html>

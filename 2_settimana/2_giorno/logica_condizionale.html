@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logica condizionale</title>
+</head>
+<body>
+    <h2>Logica condizionale</h2>
+    <p>qualsiasi nostro script è una sequenza di istruzioni vengono eseguite dall'engine javascript<br>
+    tutte le nostre istruzioni (quello che scriviamo nei nostri) sono un flusso di comandi<br>
+    l'insieme dei comandi che scriviamo porta la nostra pagina web da uno stato iniziale a uno stato finale, con il flusso dei comandi
+    possiamo far raggiungere un certo risultato<br> avremo bisogno di istruzioni per stabilire il flusso di esecuzione di un programma</p>
+    <h3>Blocchi codice</h3>
+    <p>Le istruzioni vengono raccolte in blocchi che fungono da singole istruzioni.
+        I blocchi di codice ci permettono di eseguire più istruzioni interamente<br>
+        tipico della logica condizionale è eseguire dei blocchi di codice in seguito alla valutazione di una condizione<br>
+        <b>un blocco di codice è racchiuso tra parentesi graffe</b>
+    </p>
+    <script>
+        {   // esempio di blocco di codice -> è racchiuso tra parentesi graffe
+            x = x + 3;
+            y = x + 2;
+        }
+    </script>
+    <p>La <b>logica condizionale</b> è una categoria di istruzioni che consentono di eseguire blocchi di codice sulla base della verifica di una condizione
+    Lo script "decide" se eseguire un blocco di codice, la decisione è basata sulla verifica di una condizione</p>
+    <p>Javscript prevede due istruzioni condizionali</p>
+    <ul>
+        <li>if</li>
+        <li>switch</li>
+    </ul>
+    <p><b>Il cosrtutto if prevede tre forme diverse</b></p>
+    <ul>
+        <li>if semplice</li>
+        <li>if con alternativa (if..else)</li>
+        <li>if a cascata (if.. else if.. else)</li>
+    </ul>
+
+    <h3>If semplice</h3>
+    <p>La forma <code>if</code> semplice esegue un <b>blocco di codice</b> solo se una condizione è vera<br>
+    se la condizione non è vera il blocco di codice non viene eseguito</p>
+    <p><b>Schema sintattico del costrutto if semplice</b></p>
+    <script>
+        if(condizione) {    // condizione restituisce un'espressione booleana -> true|false
+            // istruzioni   // sequenza di istruzioni da eseguire nel caso in cui la condizione sia vera
+            // engine js -> verfica la condizione   -> true -> entra nel blocco di codice {} e esegue le istruzioni che trova
+            //                                      -> false -> non entra nel blocco di codice 
+        }
+
+        // esempio utilizzo di if
+        if (x >= 37) {
+            messaggio = "Hai la febbre.\n";
+            messaggio = messaggio + " Temeratura: " + x + "gradi.";
+        }
+    </script>
+
+    <h3>If ... else</h3>
+    <p>In questa forma viene eseguito un blocco di codice oppure un altro blocco di codice in base al valore della condizione </p>
+    <p><b>Schema sintattico</b></p>
+    <script>
+        /*
+        if(condizione){
+            // istruzioni1
+        } else {
+            // istruzioni2
+        }
+        */
+        // verifico la condizione -> se la condizione è true    -> viene eseguito il blocco istruzioni1
+        //                        -> se la condizione è false   -> viene eseguito il blocco istruzioni2
+
+        // esempio di utilizzo di if else
+        /*
+        if (x%2 == 0) {
+            messaggio2 = x + " è pari";
+        } else {
+            messaggio2 = x + " è dispari";
+        }
+        */
+    </script>
+    <h3>If a cascata</h3>
+    <p>Mette a disposizione più alternative di esecizioni e quindi la possibilità di verificare più condizioni</p>
+    <p><b>Ecco lo schema sintattico</b></p>
+    <script>
+        /*
+        if(condizione1) {
+            // istruzioni1
+        } else if(condizione2) {
+            // istruzioni2
+        } else {
+            // istruzioni3 
+        }
+        */
+        // che cosa fa il mio script?
+        // 1. if -> compara la condizione -> è true   -> esegue il blocco di istruzioni1
+        //                                -> è false  -> salta il blocco di istruzioni1
+        //                                            -> compara la condizione2 -> è true   -> esegue il blocco di istruzioni2
+        //                                                                      -> è false  -> esegue il blocco di istruzioni3
+/*
+        if (x%2 == 0) {
+            messaggio3 = x + " è pari";
+        } else if (x%2 == 1) {
+            messaggio3 = x + " è dispari";
+        } else {
+            messaggio3 = x + " non è un numero";
+        }
+*/
+        // else if è una forma compatta di if else annidati uno dentro l'altro
+        /*
+        if (x%2 == 0) {
+            messaggio3 = x + " è pari";
+        } else {
+            if (x%2 == 1) {
+                messaggio3 = x + " è dispari";  
+            } else {
+                messaggio3 = x + " non è un numero";
+            }
+        }
+*/
+        let saluto = new Date(); // new è un costruttore, in questo caso new costruisce una data
+        // con new posso costruire un nuovo array new Array, così come posso costruire altri elementi sintattici (oggetti etc)
+        let orario = saluto.getHours();
+        if ((orario > 6) && (orario <=12)) {
+            document.write("Buon giorno!");
+        }
+        if ((orario > 12) && (orario <=18)) {
+            document.write("Buon pomeriggio"); 
+        }
+        if ((orario > 18) && (orario <=24)) {
+            document.write("Buona sera");
+        }
+        if ((orario > 0o0) && (orario <= 0o6)) {
+            document.write("Buona notte!");
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+    <h2>Array</h2>
+    <p>L'array è una variabile multidimensionale. Dentro a una variabile posso inserire un valore, 
+        dentro a un array posso inserire più valori</p>
+    <p>Dentro a un array incontriamo <b>strutture di dati omogenee</b></p>
+    <p>Dentro possiamo conservare qualsiasi tipo di dato (primitivi o oggetti)</p>
+    <p>Gli array sono elenchi, liste in cui salvare diversi dati</p>
+    <p>Dentro a un array associamo a un unico nome di variabile più valori</p>
+    <p>L'uso degli arrau ci semplifica le operazioni nel caso in cui dobbiamo definire più variabili</p>
+    <script>
+        var giorniDellaSettimana = [    // gli array sono delimitati da parentesi []
+            "lunedì",                   // i valori sono separati da virgole
+            "martedì",
+            "mercoledì",
+            "giovedì",
+            "venerdì",
+            "sabato",
+            "domenica"                  // rappresentazione letterale -> rappresento qualcosa a partire dal contenuto
+        ];
+        // per accedere ad un array devo fare riferimento al nome della variabile e all'indice dell'elemento
+        let primoGiorno = giorniDellaSettimana[0];          // la numerazione dell'array parte da 0!
+        let terzoGiorno = giorniDellaSettimana[2];          // terzo giorno
+        let ultimoGiono = giorniDellaSettimana[6];          // settimo (ultimo) giorno
+        let myArray = [];                                   // un array vuoto
+        let myArray2 = ["primo", , "elemento"];             // un array il cui secondo elemento è undefined
+        let myArray3 = ["stringa", "elemento", ["a", "b"]]; // un array può contenere un altro array
+        let matrice = [[2, 4, 8], [3, 9, 27], [4, 16, 64]]; // array multidimensionale
+        let tre = matrice[1] [0];                           // accedo con delle coordinate: 1ò valore posizione principale, 2ò pos. secondaria
+        let nove = matrice[1] [1];
+   </script>
+   <h2>Proprietà degli array</h2>
+   <p>In javascript esistono una serie di metodi che ci permettono di fare operazioni sugli array, 
+    la sintassi per fare questa cosa è nome_array.nome_metodo</p>
+    <p>Il primo metodo che vediamo è length -> conta quanti elementi ci sono in un array</p>
+    <p id="demo"></p> <!-- preparo un tag dentro a cui andrò a stampare qualcosa -->
+    <script>
+        // let studenti = ["Adriano", "Alessandro", "Andrea", "Antonio"];
+        // let pippo = studenti.length;   // inserisco in una variabile (nome a piacere) il metodo length applicato all'array studenti
+        // document.getElementById("demo").innerHTML = pippo;
+        // chiedo al dom (document) di fornirmi l'elemento che ha come id="demo"
+        // col metodo .innnerHTML stampo dentro a id="demo" la variabile length
+    </script>
+
+    <h3>Inserire/rimuovere elementi in un array</h3>
+    <p>per inserire degli elementi in un array abbiamo un metodo che si chiama <b>push</b></p>
+    <script>
+        /*
+        let studenti2 = ["Adriano", "Alessandro", "Andrea", "Antonio"];
+        studenti2.push("Beatrice"); // aggiunge un nuovo elemento in fondo all'array
+        document.getElementById("demo").innerHTML = studenti2
+        */
+    </script>
+
+    <p>per rimuovere degli elementi da un array abbiamo metodo che si chiama <b>pop</b></p>
+    <script>
+        let studenti3 = ["Adriano", "Alessandro", "Andrea", "Antonio"];
+        studenti3.pop();            // pop rimuove un elemento da in fondo all'array
+        document.getElementById("demo").innerHTML = studenti3
+    </script>
+
+    <p>Altri metodi: <b>unshift</b> aggiungere nuovi elementi all'inizio dell'array; <b>shift</b> rimuove dall'inizio dell'array
+        shift e unsfhit sovrascrivono l'array -> gli indici vengono modificati
+    </p>
+</body>
+</html>

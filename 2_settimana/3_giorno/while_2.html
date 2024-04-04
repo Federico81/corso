@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>While 2</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <script>
+        var text = "";          // tutto quello che stampo a video lo memorizzo in una variabile (ora stringa vuota)
+        var n = 1;
+        var i = 0;
+            while (n <= 10) {    // ciclo esterno "tabellina del"
+                text += "Tabellina del " + n;  
+                i = 0;
+                while (i <= 10) {
+                    text += "<br>" + n + "x" + i + "=" + i*n;   // ciclo interno singola tabellina
+                    i++;
+                    }
+                n++;
+                text += "<br>" + "<br>";
+            }
+    
+        document.getElementById("demo").innerHTML = text;    
+        </script>
+</body>
+</html>

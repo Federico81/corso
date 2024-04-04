@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document write</title>
+</head>
+<body>
+    <script>
+        // direttive output
+        document.write("Hello World");                   // contenuto
+        document.write("<br>");                          // html
+        document.write("<p><strong>Pippo</strong></p>"); // contenuto + html
+        document.write(3+4);                             // non è più una string -> esegue l'operazione
+        document.write("<br><br>");                      // html
+
+        // inizializzo una variabile per registrare il numero di vite di un giocatore
+        let numLives = 3;
+        document.write(numLives);                        // stampo una variabile
+        document.write("<br>");
+        // il nostro omino sta giocando, è scarso, perde una vita -> numLives -1 -> riassegno un nuovo valore
+        numLives = 2;
+        document.write(numLives);
+        document.write("<br>");
+        // posso stampare sia variabili che testi assieme
+        document.write("Tu hai " + numLives + " vite ancora");
+    </script>
+</body>
+</html>

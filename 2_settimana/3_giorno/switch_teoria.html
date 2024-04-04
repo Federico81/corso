@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch</title>
+</head>
+<body>
+    <h1>Switch</h1>
+    <p>Quando il mio costrutto if a cascata diventa troppo complesso (perché ci sono troppe condizioni da verificare) 
+        posso usare un altro costrutto: <code>switch</code> -> perfetto quando ho enne condizioni da verificare<br>
+        <b>Schema sintattico di switch</b>
+    </p>
+    <script>
+        switch(espressione) {
+            case espressione1 : istruzioni1;
+            break;
+            case espressione2 : istruzioni2;
+            break;
+            case espressione3 : istruzioni3;
+            break;
+            case espressione4 : istruzioni4;
+            break;
+            default: istruzioni5;
+            break;
+        }
+        // l'espressione di riferimento viene confrontata con le espressioni dei vari case
+        // quando si trova l'espressione corrispondente si esegue il blocco di codice assegnato
+        // se non si trova corrispondenza viene eseguito il blocco di codice associato alla keyword default
+        // la keyword default è opzionale
+        // break è importante perché ci permette di evitare la prosecuzione con il caso successivo
+        // esempio
+        switch(x%2){
+            case 0: messaggio = x + " è pari";
+            break;
+            case 1: messaggio = x + " è dispari";
+            break;
+            default: messaggio = x + " non è un numero";
+            break;
+        }
+        // switch lo uso nel caso in cui ci siano più (di due) case
+        // posso eseguire lo stesso blocco di codice per un gruppo di valori
+        switch(voto) {
+            case 1:
+            case 2:
+            case 3:
+            case 4:
+                giudizio = "insufficiente";
+                break;
+            case 5:
+                giudizio = "quasi";
+                break;
+            case 6: giudizio = "sufficiente";
+                break;
+            case 7: giudizio = "discreto";
+                break;
+            case 8: giudizio = "ottimo";
+                break;
+            case 9:
+            case 10:
+                giudizio = "genietto";
+                break;
+            default: messaggio = "non classificato";
+                break;
+        }
+    </script>
+</body>
+</html>

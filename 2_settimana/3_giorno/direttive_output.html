@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Direttive output</title>
+</head>
+<body>
+    <!-- inner html -->
+    <p>posso selezionare un elemento html e modificare / inserire del contenuto</p>
+    <p id="demos"></p>
+    <script>
+        document.getElementById("demos").innerHTML = "pippo";
+    </script>
+
+    <!-- document write -->
+    <p>Posso stampare a video dei contenuti o variabili (o entrambe)</p>
+    <script>
+        document.write(5 + 6);
+    </script>
+
+    <!-- console log -->
+    <p>Uso la console principalmente quando voglio fare debug (controllare il flusso di codice)</p>
+    <script>
+        console.log(5 + 6); // la vedo nello strumento di debug del browser (tasto destro -> console)
+    </script>
+
+    <!-- window alert o alert -->
+    <p>posso stampare qualcosa in un popUp</p>
+    <script>
+        window.alert (5 + 6);
+        alert (5 + 6);          // alert (window lo posso tralasciare)
+    </script>
+
+    <!-- altro metodo dell'oggetto window -->
+    <form>
+        <button onclick="window.print()">Stampa questa pagina</button>
+    </form>
+</body>
+</html>

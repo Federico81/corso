@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funzioni scope</title>
+</head>
+<body>
+    <p>Fino a ECMAScript 6 var era l'unico modo per dichiarare una variabile, poi sono stati introdotti let e const</p>
+    <script>
+        var x = 10; // var appartiene all'oggetto globale window -> è accessibile globalmente
+    </script>
+    <p>Nelle funzioni esiste un ambito locale (scope) distinto da quello globale</p>
+    <script>
+        var x = "fuori";        // dichiaro x fuori dalla funzione
+        function faiQualcosa(){
+            var x = "dentro"    // dichiaro x dentro alla funzione
+            console.log(x);     // dentro
+        }
+        faiQualcosa();          // invocazione della funzione (se la dichiaro e basta non viene mai eseguito)
+        console.log(x);         // fuori    -> la variabile globale non viene alterata (scope sia locale che globale)
+                                // esempio visto con Simone, se stampate tutto assieme in console datà 4 volte dentro perché sovrascrive
+        var x = "fuori";
+        function faiQualcosa() {
+            x = "dentro"        // assegno un valore senza dichiarare la keyword var
+            console.log(x);     // aggiorna il valore -> "dentro"      
+        }
+        faiQualcosa();
+        console.log(x);         // dentro
+        // la variabile x avendo uno scope globale (var) è accessibile anche all'interno della funzione -> il valore viene alterato
+        // le variabili dichiarate dentro le funzioni hanno uno scope locale e non sono accessibili dall'esterno
+        // var ha uno scope locale | globale se viene dichiarato dentro | fuori dalla funzione
+
+        // le parentesi {} racchiudono il block scope, un blocco a sé rispetto al codice globale
+        // -> una variabile dichiarata con var -> è accessibile anche all'esterno del blocco di codice
+        // -> una variabile dichiarata con let -> è accessibile solo all'interno del blocco di codice
+
+        // esempio
+        {var x = 2}
+        // x qui è disponibile
+        {let x = 2}
+        // x qui non è disponibile
+
+        // esempio 2
+        
+        var i = 0;
+        if(true) {
+            var i = 1
+        }
+        
+        console.log(i); // 1 -> i viene riscritto (è modificabile anche se fuori dal blocco)
+
+        let i = 0;
+        if(true) {
+           let i = 1;
+        }
+        console.log(i); // 0 -> let è disponibile solo all'interno del blocco di codice (non lo potrei sovrascrivere)
+
+        ///// esempio 3
+        var x = 10; // x è 10
+        {var x = 2} // x è 2
+                    // anche qui x sarebbe 2 perché non c'è block scope la variabile x viene sovrascritta
+        // se invece uso let
+        var x = 10  // x è 10
+        {let x = 2} // x è 2
+                    // x è 10 -> x non viene sovrascritta perché let ha block scope -> è valido soltanto tra {}
+
+        // ri dichiarazione
+        // è consentito
+        var x = 2;  // x = 2
+        var x = 3;  // x = 3
+        let x = 2
+        {let x = 3}     // è consentito ridichiarare in uno scope differente
+        {let x = 4}     // è consentito ridichiarare in uno scope differente
+
+        // non è consentito
+        var x = 2;  // è consentito
+        let x = 3;  // non è consentito
+        {
+            var x = 4; // è consentito
+            let x = 5; // non è consentito
+        }
+
+        // ! non è consentito ridichiare usando let né nello scope globale né nello scope locale
+    </script>
+</body>
+</html>

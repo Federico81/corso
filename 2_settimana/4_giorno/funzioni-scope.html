@@ -20,6 +20,8 @@
         faiQualcosa();          // invocazione della funzione (se la dichiaro e basta non viene mai eseguito)
         console.log(x);         // fuori    -> la variabile globale non viene alterata (scope sia locale che globale)
                                 // esempio visto con Simone, se stampate tutto assieme in console datà 4 volte dentro perché sovrascrive
+       
+       
         var x = "fuori";
         function faiQualcosa() {
             x = "dentro"        // assegno un valore senza dichiarare la keyword var
@@ -82,6 +84,36 @@
         }
 
         // ! non è consentito ridichiare usando let né nello scope globale né nello scope locale
+    </script>
+
+    <h2>Hoisting</h2>
+    <p>Comportamento in cui le funzioni (le variabili) possono essere usate PRIMA della dichiarazione</p>
+    <p id="demo"></p>
+    <script>
+        myName = "Federico";                        // posso usare myName anche se lo dichiaro dopo
+        var p = document.getElementById("demo");
+        var myName;                                 // dichiarazione
+
+        // esempio con le funzioni
+        // migliora la leggibilità -> apro il file e vedo che cosa fa il codice
+
+        resetPunteggio();
+        disegnaTabellone();
+        popolaTabellone();
+        avviaGioco();
+
+        function resetPunteggio() {
+            console.log("Sto resettando il punteggio")
+        }
+        function disegnaTabellone() {
+            console.log("Sto disegnando il punteggio")
+        }
+        function popolaTabellone() {
+            console.log("Sto popolando il punteggio")
+        }
+        function avviaGioco(){
+            console.log("Sto avviando il punteggio")
+        }
     </script>
 </body>
 </html>

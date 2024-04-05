@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stringhe</title>
+</head>
+<body>
+    <p>Le stringhe hanno un corrispondete predefinito che prevede dei metodi per manipolare le stringhe</p>
+    <p><b>Metodo length</b></p>
+    <p>La lunghezza della stringa</p>
+    <p id="demo"></p>
+    <p>Metodo replace sostituisce un valore in una stringa con un altro</p>
+    <button onclick="myFunction()">Prova</button>
+    <p id="demo2">Vieni a visitare la Grecia!</p>
+    <p>Metodi lowercase e uppercase sostituiscono una stringa con caratteri minuscoli o maiuscoli</p>
+    <button onclick="myFunctiondue()">Prova</button>
+    <p id="demo3">converto questa scritta</p>
+    <script>
+        // metodo length -> conta quanti parametri ci sono in una stringa
+        let text = "inserisco in una variabile la mia stringa";
+        document.getElementById("demo").innerHTML = text.length;    // 41 è il numero dei caratteri nella stringa
+
+        //////// slice, substring, substr
+        // metodo slice -> estrae una parte di una stringa
+        // let text = "inserisco in una variabile la mia stringa";
+        // let parte = text.slice(10, 16); // due parametri: da dove a dove
+        // let parte = text.slice(10);     // un parametro: da dove alla fine
+        // let parte = text.slice(-7, -1); // parte a contare dal fondo della stringa
+        // substring .substring -> unica differenza con slice è che i valori inferiori a 0 sono uguali a 0
+        // substr .substr -> la differenza è che il secondo parametro ci dice quante lettere prendere
+        let parte = text.substr (10, 6) // posizione 10 ne conta 6
+        document.getElementById("demo").innerHTML = parte;
+
+        // metodo replace
+        function myFunction() {
+            let text = document.getElementById("demo2").innerHTML;
+            document.getElementById("demo2").innerHTML = text.replace("la Grecia", "l'Italia");
+        }
+
+        // metodi lowercase e uppercase
+        function myFunctiondue() {
+            let text = document.getElementById("demo3").innerHTML;
+            document.getElementById("demo3").innerHTML = text.toUpperCase();
+        }
+    </script>
+</body>
+</html>

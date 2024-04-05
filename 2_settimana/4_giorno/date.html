@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date</title>
+</head>
+<body>
+    <script>
+        // costruttore new, oggetto date, scopro i metodi associati
+        var data = new Date();
+        var Hh, Mm, Ss, mm;
+        Hh = data.getHours() + ":";
+        Mm = data.getMinutes() + ":";
+        Ss = data.getSeconds() + ":";
+        mm = data.getMilliseconds();
+        document.write("Sono le ore " + Hh + Mm + Ss + mm);
+
+        document.write("<br><br>");
+
+        var data = new Date();
+        var gg, mm, aaaa;
+        gg = data.getDate() + "/";
+        mm = data.getMonth() + "/";
+        aaaa = data.getFullYear();
+        document.write("Oggi è il " + gg + mm + aaaa);
+
+        document.write("<br><br>");
+
+        var data = new Date();
+        var set, gg, mm, aaaa, h, m, s;
+        // crea la tabella dei mesi
+        var mesi = new Array();
+        mesi[0] = "Gennaio";
+        mesi[1] = "Febbraio";
+        mesi[2] = "Marzo";
+        mesi[3] = "Aprile";
+        mesi[4] = "Maggio";
+        mesi[5] = "Giugno";
+        mesi[6] = "Luglio";
+        mesi[7] = "Agosto";
+        mesi[8] = "Settembre";
+        mesi[9] = "Ottobre";
+        mesi[10] = "Novembre";
+        mesi[11] = "Dicembre";
+        // crea la tabella dei giorni
+        var giorni = new Array();
+        giorni[0] = "Domenica";
+        giorni[1] = "Lunedì";
+        giorni[2] = "Martedì";
+        giorni[3] = "Mercoledì";
+        giorni[4] = "Giovedì";
+        giorni[5] = "Venerdì";
+        giorni[6] = "Sabato";
+        // estre dalla tabella il giorno della settimana
+        set = giorni[data.getDay()] + " ";
+        gg = data.getDate() + " ";
+        // estra dalla tabella il mese
+        mm = mesi[data.getMonth()] + " ";
+        aaaa = data.getFullYear();
+        h = data.getHours() + ":";
+        m = data.getMinutes() + ":";
+        s = data.getSeconds();
+        document.write("Oggi è " + set + gg + mm + aaaa + " ore " + h + m + s);
+    </script>
+</body>
+</html>

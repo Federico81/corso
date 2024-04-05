@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math</title>
+</head>
+<body>
+    <p><b>Math</b> è un oggetto a cui posso associare una serie di metodi (matematici)<br>
+    i metodi matematici vengono messi a disposizione per essere richiamati e usati per fare dei calcoli</p>
+    <table>
+        <tr><th colspan="2">Proprietà sono delle costanti matematica</th></tr>
+        <tr><td>Math.PI</td><td>Pi Greco</td></tr>
+        <tr><td>Math.LN2</td><td>Logaritmo di 2</td></tr>
+        <tr><td>Math.SQRT2</td><td>Radice quadrata di 2</td></tr>
+        <tr><td>Math.E</td><td>costante di Eulero</td></tr>
+        <!-- https://www.w3schools.com/js/tryit.asp?filename=tryjs_math_constants -->
+    </table>
+    <p>I metodi di <code>Math</code> ci permettono di rappresentare delle funzioni matematiche comuni</p>
+    <p id="demo"></p>
+    <script>
+        document.getElementById("demo").innerHTML = Math.max(5, 10, 15);    // restituisce il valore più alto
+        document.getElementById("demo").innerHTML = Math.min(5, 10, 15);    // restituisce il valore più basso
+        document.getElementById("demo").innerHTML = Math.pow(4, 3);         // elevo 4 alla terza
+        document.getElementById("demo").innerHTML = Math.sqrt(9);           // radice quadrata di 9
+        document.getElementById("demo").innerHTML = Math.ceil(1.4);         // arrotonda all'intero più grande  // 2
+        document.getElementById("demo").innerHTML = Math.floor(1.6);        // arrotonda all'intero più piccolo // 1
+        document.getElementById("demo").innerHTML = Math.round(1.5);        // arrotonda all'intero più vicino  // 2
+        document.getElementById("demo").innerHTML = Math.random();          // genera un numero casuale tra 0 e 1
+        document.getElementById("demo").innerHTML = Math.ceil(Math.random() * 100);
+        // combinare due metodi -> per generare da 0 100 -> numero casule * 100 + arrotondato
+        // seno, coseno, tangente, cotangente, logaritmi, radici
+        // Math.sin
+        // Math.cos
+        // Math.tan
+        // Math.abs
+    </script>
+</body>
+</html>

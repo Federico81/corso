@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+</head>
+<body>
+    <h1>Dom</h1>
+    <p><b>Document object model</b> è in realtà dell'oggetto window e rappresenta la struttura html caricata nella mia pagina, 
+    ha una struttura a oggetto. Il DOM fornisce una rappresentazione gerarchica di oggetti, che viene spesso chiamata <b>Dom tree</b>
+(assomiglia a un albero genealogico). Questo albero di oggetti è accessibile via javascript, infatti possiamo fare:</p>
+<ul>
+    <li>leggere gli elementi del DOM</li>
+    <li>modificare la struttura degli elementi (tag)</li>
+    <li>modificare il contenuto degli elementi (tag)</li>
+    <li>modificare lo stile</li>
+</ul>
+<p>Il DOM si presenta come un albero con una serie di <b>nodi</b> che sono di diversi tipi</p>
+<table>
+    <tr>
+        <th>Tipi di nodo</th>
+        <th>Descrizione</th>
+        <th>Esempio</th>
+    </tr>
+    <tr>
+        <td>documento</td>
+        <td>La radice del mio albero, normalmente ne esiste soltanto una, ma se uso tag &lt;frame&gr; (es. youtube, google maps)
+            ci sono più nodi di tipo documento in una pagina
+        </td>
+        <td><code>&lt;html&gt;</code></td>
+    </tr>
+    <tr>
+        <td>elemento</td>
+        <td>individua un tag html</td>
+        <td>&lt;body&gt; &lt;div&gt; &lt;p&gt;</td>
+    </tr>
+    <tr>
+        <td>attributo</td>
+        <td>un nodo di tipo attributo corrsiponde ad un attributo di un tag html</td>
+        <td>ad esempio l'attributo src di un tag immagine; l'attributo href di un link</td>
+    </tr>
+    <tr>
+        <td>testo</td>
+        <td>contenuto testuale di un tag</td>
+        <td>lorem ispum</td>
+    </tr>
+    <tr>
+        <td colspan="3">Nelle specifiche W3C esistono altri tipi di nodi: ad esempio commento, ad esempio doctype, ma li trascuriamo
+            perché non faremo manipolazioni javascript su questi tipi di nodo
+        </td>
+    </tr>
+    <h2>Manipolare il DOM via javascript</h2>
+    <ul>
+        <li>Selezionare un elemento del DOM</li>
+        <li>Modificare lo "style" di un elemento</li>
+        <li>Modificare le classi di un elemento</li>
+        <li>Modificare il contenuto di un elemento</li>
+        <li>Creare e inserire e rimuovere degli elementi nel DOM</lli>
+    </ul>
+</table>
+</body>
+</html>

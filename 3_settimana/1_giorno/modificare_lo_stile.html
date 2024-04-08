@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modificare lo stile</title>
+</head>
+<body>
+    <h1 id="title">Javascript DOM manipulation</h1>
+    <script>
+        // querySelector
+        let title = document.querySelector('#title');    // seleziono un tag del DOM
+        title.style.color = 'yellow';                    // la proprietà .style ci dà accesso alle coppie attributo/valore del css
+        title.style.backgroundColor = 'black';           // in js uso camelCase (e non kebab-case)
+                                                         // perché ha valore matematico -> fontSize, borderWidth, borderRadius etc
+        console.log(title);                              // se voglio vedere le sintassi modificate
+
+        // querySelectorAll mi restituisce una NodeList e potrò usare forEach per accedere a ciascun elemento
+    </script>
+    <p>Javascript DOM manipulation</p>
+    <p>Javascript DOM manipulation</p>
+    <p>Javascript DOM manipulation</p>
+    <script>
+        let paragrafi = document.querySelectorAll('p');
+        paragrafi.forEach((paragrafo) => {
+            paragrafo.style.color = 'yellow';
+            paragrafo.style.backgroundColor = 'black';
+        })
+    </script>
+
+    <!-- aggiungere delle classi -->
+    <h3>Aggiungere delle classi</h3>
+    <p>Di che cosa ho bisogno? 1. porizione html 2. una porzione di css con la classe 3. una porzione di js per aggiungere la classe</p>
+    <style>
+        .mystyle {background-color: coral; color:white; padding:25px; font-size: 40px;}
+    </style>
+    <p>Clicca sul bottone per aggiungere una classe</p>
+    <button onclick="myFunction()">Prova a aggiungere una classe</button>
+    <div id="myDIV">
+        Questo è il mio div
+    </div>
+    <script>
+        function myFunction() {
+            var element = document.getElementById("myDIV");
+            element.classList.add("mystyle");               // ClassList è un metodo dedicato -> .add aggiunge
+        }
+    </script>
+
+    <!-- rimuovere classi -->
+    <h3>Rimuovere classi</h3>
+    <button onclick="myFunctiondue()">Prova a rimuovere una classe</button>
+    <div id="myDIVdue" class="mystyle">
+        Questo è il mio div
+    </div>
+    <script>
+        function myFunctiondue() {
+            var element = document.getElementById("myDIVdue");
+            element.classList.remove("mystyle");            // ClassList è un metodo dedicato -> .remove rimuove
+        }
+    </script>
+
+    <!-- toggle classi: aggiunge se la classe non c'è e rimuove se la classe c'è -->
+    <h3>Toggle classi</h3>
+    <button onclick="myFunctionTre()">Prova a fare un toggle di una classe</button>
+    <div id="myDIVtre">
+        Questo è il mio div
+    </div>
+    <script>
+        function myFunctionTre() {
+            var element = document.getElementById("myDIVtre");
+            element.classList.toggle("mystyle");                // classList.toggle acceta come argomento la classe da aggiungere|togliere
+        }
+    </script>
+</body>
+</html>

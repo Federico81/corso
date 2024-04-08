@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selezionare attributi nel DOM</title>
+</head>
+<body>
+    <h2>Selezionare attributi nel DOM</h2>
+    <p>Vogliamo manipolare ad esempio la proprietà href di un link oppure la proprietà src di un'immagine</p>
+    <table>
+        <tr>
+            <th>Metodo</th>
+            <th>Descrizione</th>
+        </tr>
+        <tr>
+            <td>hasAttribute(attrName)</td>
+            <td>Restituisce true se l'elemento ha l'attributo specificato come parametro</td>
+        </tr>
+        <tr>
+            <td>hasAttributes()</td>
+            <td>Restituisce true se l'elemento ha almeno un attributo valorizzato</td>
+        </tr>
+        <tr>
+            <td>getAttribute(attrName)</td>
+            <td>restituisce il valore dell'attribute specificato come parametro</td>
+        </tr>
+        <tr>
+            <td>setAttribute(attrName, value)</td>
+            <td>imposta (col secondo parametro) il nuovo valore di quel determinato attributo</td>
+        </tr>
+    </table>
+    <p>Quando uso questi metodi?</p>
+    <script>
+        // assegno un'immagine di default ai tag <img> che non hanno immagine associate
+        var imgList = document.getElementsByTagName("img");
+        for (var i = 0; i < imgList.length; i++) {
+            if (!imgList[i].hasAttribute("src")) {              // 1 parametro -> il nome dell'attributo che cerco
+                imgList[i].setAttribute("src", "avatar.png");   // 2 parametri -> attributo che assegno, valore
+                // tutte le volte che src non c'è lo aggiunge e gli assegna "avatar.png"
+                // <img> -> <img src="avatar.png">
+            }
+        }
+        // posso accedere anche con la dot notation
+        var imgList = document.getElementsByTagName("img");
+        for (var i = 0; i < imgList.length; i++) {
+            if(!imgList[i].src) {
+                imgList[i].src = "avatar.png";
+            }
+        } 
+    </script>
+    <h3>Esempio di sostituzione immagine</h3>
+    <img id="myImg" src="./img/img_1.jpeg" alt="#">
+    <p>Clicca sul bottone per cambiare l'attributo del valore src</p>
+    <button onclick="myFunction()">Prova</button>
+    <script>
+        function myFunction() {
+            document.getElementById("myImg").src = "./img/img_2.jpeg";
+        }
+    </script>
+
+    <h3>Esempio completo con setAttribute</h3>
+    <p>Seleziono un titolo e con setAttribute gli passo una classe da aggiungere</p>
+    <style>
+        .democlass {color:red}
+    </style>
+    <h5 id="myH5" class="democlass">L'elemento a cui aggiungo la classe</h5>
+    <button onclick="myFunctionDue()">Aggiungi la classe</button>
+    <script>
+        function myFunctionDue() {
+            document.getElementById("myH5").setAttribute("class", "democlass");
+        }
+    </script>
+</body>
+</html>

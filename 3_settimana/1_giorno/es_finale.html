@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esercitazione</title>
+    <style>
+        .first {background-color: red; color: white;}
+        .second {background-color: black; color: grey;}
+        .third {background-color: green; color: gold;}
+    </style>
+</head>
+<body>
+    <span>Il colore del testo è <b>black</b></span>
+    <button id="change_btn" onclick="myFunction()">Change color</button>
+    <script>
+        var classiCSS = ['first', 'second', 'third']; // .css
+        var currentIndex = 0;
+
+        const myFunction = function() {
+            let selectBody = document.querySelector('body');
+            switch (classiCSS[currentIndex]) {
+                case 'first':
+                    selectBody.className = 'first';
+                    break;
+                case 'second':
+                    selectBody.className = 'second';
+                    break;
+                case 'third':
+                    selectBody.className = 'third';
+                    break;
+            }
+            currentIndex = (currentIndex + 1) % classiCSS.length;
+        }
+    </script>
+</body>
+</html>

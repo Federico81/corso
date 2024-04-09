@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destrutturazione</title>
+</head>
+<body>
+    <h2>Assegnamento di destrutturazione</h2>
+    <p>Gli oggetti e gli array sono le strutture javascript più utilizzate, a volte posso avere bisogno di usarne solo una parte</p>
+    <p>L'assegnamento di destrutturazione è la sintassi che usiamo per spacchettare oggetti|array</p>
+    <script>
+        let arr = ["Federico", "De Ambrosis"];  // array con nome e cognome
+        let [firstName, surname] = arr;         // assegnamento di destrutturazione
+                                                // imposta firstName = arr[0] e surname = arr[1]
+        alert(firstName);                       // mi mette nell'alert Federico
+        alert(surname);                         // mi mette nell'alert De Ambrosis
+        // let [firstName, surname] = "Federico DeAmbrosis".split(' ');     // metodo array che vedremo tra poco
+
+    </script>
+    <p>1. <b>Destruttura</b> non distrugge! I singoli elementi vengono copiati dentro a delle variabili ma l'array originale non viene modificato</p>
+    <p>2. Posso ignorare degli elementi usando la virgola</p>
+    <script>
+        var [firstName, , titolo] = ["Federico", "De Ambrosis", "docente"];
+        alert(titolo)   // il secondo viene saltato, il terzo assegnato a titolo
+    </script>
+    <!-- altri esempi semplici + combinato di rest -->
+    <script>
+        var names = ["alpha", "beta", "gamma", "delta"];
+        var firstName = names[0];
+        var secondName = names[1];
+        console.log(firstName);     // alpha
+        console.log(secondName);    // beta
+
+        [x, y, ...restof] = [10, 20, 30, 40, 50];
+        console.log(x);     // 10
+        console.log(y);     // 20
+        console.log(restof);// [30, 40, 50]
+
+        // oggetto
+        ({x, y, ...restof} = {x:10, y:20, m:30, n:40});
+        console.log(x);     // 10
+        console.log(y);     // 20
+        console.log(restof);// {m:30, n:40}
+    </script>
+</body>
+</html>

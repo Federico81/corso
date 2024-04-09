@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Altri metodi degli array</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <script>
+        // concat -> concatenare degli array
+        let arr1 = ["Manuel", "Maria Antonietta", "Mirko"];
+        let arr2 = ["Nicola", "Rosario", "Simone"];
+        let studenti = arr1.concat(arr2);
+        document.getElementById("demo").innerHTML = studenti;   // "Manuel", "Maria Antonietta", "Mirko", "Nicola", "Rosario", "Simone"
+        document.getElementById("demo").innerHTML = studenti.includes("Rosario"); // se è vero restituisce true
+        // metodo simile a quello visto prima con le stringhe
+
+        // find -> restituisce il primo valore che supera un determinato test
+        // findIndex -> restituisce l'indice del primo valore che supera un test
+        var ages = [3, 10, 18, 20]
+        document.getElementById("demo").innerHTML = ages.find(checkAge);        // restituisce 20
+        document.getElementById("demo").innerHTML = ages.findIndex(checkAge);   // restituisce 3
+        function checkAge(age) {
+            return age > 18;
+        }
+
+        // filter -> filtra in base a un determinato controllo
+        var ages = [32, 33, 16, 40];
+        document.getElementById("demo").innerHTML = ages.filter(checkAdult);    // restituisce 32, 33, 40
+        function checkAdult(age) {
+            return age >= 18;
+        }
+
+        // some -> controlla se almeno un elemento ha passato un determinato test
+        var ages = [3, 10, 18, 20]
+        document.getElementById("demo").innerHTML = ages.some(checkAdult);      // true
+
+
+        // map -> crea un nuovo array dal risultato di una funzione che viene assegnata a ogni elemento
+        var numbers = [4, 9, 16, 25];
+        document.getElementById("demo").innerHTML = numbers.map(Math.sqrt);     // radice quadrata
+            // map crea un nuovo array con i risultati // 2, 3, 4, 5
+
+        // forEach -> chiama una funzione per ciascun elemento di un array
+        var numbers = [4, 9, 16, 25];
+        numbers.forEach(myFunction);
+        document.getElementById("demo").innerHTML = numbers;    // 40, 90, 160, 250
+        function myFunction(item, index, arr){                  // funzione è obbligatoria
+                                                                // item|CurrentValue è obbligatorio
+                                                                // index (opzionale) è l'indice dell'elemento dell'array
+                                                                // arr (opzionale) è l'array dell'elemento
+            arr[index] = item * 10;                                                    
+        }
+
+        // reduce       -> ridurre a un valore in base a una determinata operazione // vado da sinistra verso destro
+        // reduceRight  -> uguale ma va da destra a sinistra
+        var numbers = [175, 50, 25];
+        document.getElementById("demo").innerHTML = numbers.reduce(myFunc);     // 100 -> 175 - 50 - 25
+                                                                // reduceRight -> -200 -> 25 - 50 - 175
+        function myFunc(a, b) {
+            return a - b;
+        }
+    </script>   
+    <p>metodi base: length, pop, push, shift, unshift, concat, splice</p>
+    <p>metodi di ricerca: indexOf, find, findIndex, includes</p>
+    <p>metodi per ordinare: sort, reverse</p>
+    <p>metodi per iterare: forEach, map, filter, reduce, reduceRight, every, some</p>
+</body>
+</html>

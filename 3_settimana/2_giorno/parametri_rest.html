@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parametri rest</title>
+</head>
+<body>
+    <h2>Parametri rest</h2>
+    <p><b>Rest</b> in inglese significa resto|restante. Con <code>Paramentro rest</code> raccogliamo un numero non definito di parametri in un array
+    </p><p>Quando dichiariamo una funzione indichiamo il numero di parametri -> quelli che tendenzialmente valorizziamo<br>
+    può capitare in alcune funzioni di vedere n parametri <em>i parametri delle funzioni vengono inseriti in array <code>arguments</code></em><br>
+    Con i parametri rest <code>...</code> possiamo racchiudere i parametri di troppo</p>
+    <script>
+        function myFun(a, b, ...altri_argomenti) {
+            console.log("a", a);
+            console.log("b", b);
+            console.log("altri argomenti", altri_argomenti);
+        }
+        myFun("uno", "due", "tre", "quattro", "cinque", "sei")
+        // a, uno
+        // b, due
+        // altri_argomenti, ["tre", "quattro", "cinque", "sei"]
+
+
+        function sum(...mieiArgomenti) {
+            let total = 0;
+            for (let arg of mieiArgomenti) {
+                total += arg;
+            }
+            return total;
+        }
+        console.log(sum(1, 2, 3));          // output atteso -> 6;
+        console.log(sum(1, 2, 3, 4));       // output atteso -> 10;
+        console.log(sum(1, 2, 3, 4, 5));    // output atteso -> 15;
+    </script>
+    <h3>for ...of</h3>
+    <p><code>for ...of</code> è una variante del ciclo <code>for</code> che esegue un loop su dei valori che vengono da un oggetto iterabile 
+        (array ad esempio)</p>
+        <p>Sintassi -> dichiaro il singolo elemento della collezione</p>
+        <script>
+            let array1 = ['a', 'b', 'c', 'd']
+            for (let element of array1) {
+                console.log(element);
+            }
+            // output: 'a', 'b', 'c', 'd'
+        </script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>metodi degli array</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <script>
+        let studenti = ["Adriano", "Alessandro", "Simone", "Nicola"];
+        /* metodi già visti */
+        // lenght -> conta gli elementi e restituisce un valore
+        let pippo = studenti.length;
+        document.getElementById("demo").innerHTML = pippo;   // stampa il numero di elementi presenti nell'array 
+        studenti.length = 2;                                 // uso length per stampare solo fino a una posizione
+        document.getElementById("demo").innerHTML = studenti;// stampa l'array fino alla posizione 2
+
+        // push -> aggiunge un elemento in fondo all'array
+        studenti.push("Morgan", "Luigi");                    // aggiunge elementi in fondo all'array
+        document.getElementById("demo").innerHTML = studenti;// Adriano, Alessandro, Morgan, Luigi
+
+        // pop -> elimina un elemento da in fondo all'array
+        studenti.pop();                                      // elimina l'ultimo elemento
+        document.getElementById("demo").innerHTML = studenti;// Adriano, Alessandro, Morgan
+        // let removed = fruits.pop();                          // posso mettere in una variabile l'item su cui ho fatto pop
+        // document.getElementById("demo").innerHTML = removed; // Morgan
+
+        // shift -> rimuove il primo item di un array
+        studenti.shift();
+        document.getElementById("demo").innerHTML = studenti;           // Alessandro, Morgan
+        document.getElementById("demo").innerHTML = studenti.shift();   // Alessandro
+        document.getElementById("demo").innerHTML = studenti;           // Morgan
+
+        // unshift -> aggiunge nuovi item all'inizio dell'array
+        studenti.unshift("Davide", "Filippo", "Flavio");
+        document.getElementById("demo").innerHTML = studenti;           // Davide, Filippo, Flavio, Morgan
+
+        // sort -> ordinare un array in ordine alfabetico
+        document.getElementById("demo").innerHTML = studenti.sort();    // Davide, Filippo, Flavio, Morgan
+                                                                        // resta uguale perché sono già in ordine alfabetico
+        
+        // reverse -> ordine inverso
+        studenti.sort();
+        studenti.reverse();
+        document.getElementById("demo").innerHTML = studenti;           // Morgan, Flavio, Filippo, Davide
+
+        // splice -> togliere o aggiungere elementi in qualsiasi posizione
+        // due argomenti obbligatori + argomenti opzionali
+        // 1ò argomento     -> obbligatorio -> la posizione da cui eliminare (o aggiungere) elementi
+        // 2ò argomento     -> obbligatorio -> quanti elementi eliminare
+        // dal 3ò argomento -> opzionali    -> servono a dire quali elementi (eventualmente) aggiungere
+        studenti.splice(2,2);                                           // dalla posizione 2 elimina 2 item
+        document.getElementById("demo").innerHTML = studenti;           // Morgan, Flavio
+        studenti.splice(2, 0, "Sabrina", "Salvatore");                  // dalla posizione 2 elimina 0 e aggiungi
+        document.getElementById("demo").innerHTML = studenti;           // Morgan, Flavio, Sabina, Salvatore
+
+        // indexOf -> cercare un elemento in un array -> restituisce la posizione
+        let index = studenti.indexOf("Sabrina");
+        document.getElementById("demo").innerHTML = index;              // 2
+    </script>
+</body>
+</html>

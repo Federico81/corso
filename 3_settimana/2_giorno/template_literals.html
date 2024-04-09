@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template literals</title>
+</head>
+<body>
+    <h2>Template literals</h2>
+    <p>Sintassi avanzata per comporre delle stringhe complesse -> delimitati da backtick (apici inversi) <code>` `</code></p>
+    <p>su mac option + \ su windows alt gr + '</p>
+    <script>
+        var valore_iniziale = 0;
+        var valore = 12;
+        var valore_finale = 24;
+        var messaggio = "Attenzione!\n Il valore inserito " + valore + " non è valido perché deve essere compreso tra " + valore_iniziale + " e" + valore_finale;
+        console.log(messaggio);
+        // uso template string -> delimitati da ``
+        //                     -> non ho bisogno di \n per andare a capo
+        //                     -> sintassi per passare le variabili senza doverle concatenare con +
+        var messaggio = `Attenzione!
+        Il valore inserito ${valore} non è valido perché deve essere compreso tra ${valore_iniziale} e ${valore_finale}.
+        Si prega di riprovare`; // gli a capo inseriti in un template string vengono mantenuti
+        console.log(messaggio);
+    </script>
+</body>
+</html>

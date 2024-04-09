@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operatore Spread</title>
+</head>
+<body>
+    <h2>Operatore Spread</h2>
+    <p>L'operatore spread condivide con i parametri rest una particolare sintassi: i tre puntini <code>...</code>
+    <b>spread</b> in inglese significa espandere|diffondere. Con l'operatore spread posso espandere array|oggetti per estrarne i dati
+    e renderli disponibili in altri ambiti diversi (li passo come parametri a una funzione, creo un nuovo array, etc.)
+    </p>
+    <script>
+        // esempio 1: uso spread in un funzione
+        function mia_funzione(a, b, c) {
+            console.log(a, b, c);
+        }
+        let valori = ["Ecco", "il mio operatore", "spread"];
+        mia_funzione(...valori);    // ecco l'operatore spread
+        // i valori vengono estratti e utilizzati come se li avessi inseriti uno a uno (separandoli con la virgola)
+
+        // esempio 2: uso spread in un array
+        // usiamo l'operatore spread per estrarre tutti i dati di un array e inserirli in un altro 
+        let lista_a = [0, 1, 2];
+        let lista_b = [...lista_a, 3, 4, 5];
+        console.log(lista_b);   // 0, 1, 2, 3, 4, 5
+
+        // esempio 2b: possiamo usare l'operatore spread dove vogliamo anche più volte
+        let giorniLavorativi = ["lun", "mar", "mer", "gio", "ven"];
+        let fineSettimana = ["sab", "dom"];
+        let settimana = [...giorniLavorativi, ...fineSettimana];
+        console.log(settimana); // ["lun", "mar", "mer", "gio", "ven", "sab", "dom"]
+
+        // Con l'operatore spread facciamo quelle che si chiamano "copie superficiali" -> non si modifica l'array originale
+        // quando copio un array array_a = array_b  -> sto copiando un riferimento al primo array
+        //                                          -> le due variabili sono collegate
+        //                                          -> ogni modifica a una variabile è visibile nell'altra
+        let originale = [0, 1, 2];
+        let copiaRiferimento = originale;           // copia del riferimento
+        let copiaValori = [...originale];           // copia superficiale // shallow copy
+        originale.push(3); 
+        console.log(copiaRiferimento);              // [0, 1, 2, 3];
+        console.log(copiaValori);                   // [0, 1, 2];   // la modifica dell'originale non ha avuto effetto
+
+        // esempio3: in un oggetto
+        let utenteBase = {
+            nome: "",
+            password: ""
+        };
+        let amministratore = {
+            ...utenteBase,
+            nome: "admin",
+            permessi: [],
+        };
+    </script>
+</body>
+</html>

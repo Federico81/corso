@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stringhe nuovi metodi</title>
+</head>
+<body>
+    <h2>Metodi delle stringhe</h2>
+    <p>Abbiamo già incontrato alcuni metodi delle stringhe:</p>
+    <ul>
+        <li><b>length</b> che ci permette di contare la lunghezza di una stringa</li>
+        <li><b>slice, substring, substr</b> tre metodi per tagliare delle stringhe</li>
+        <li><b>toUpperCase e toLowerCase</b> per convertire delle stringhe in maiuscole|minuscole</li>
+        <li><b>trim</b> per pulire gli spazi bianchi</li>
+    </ul>
+    <p id="demo"></p>
+    <p id="demo2"></p>
+    <script>
+        let text = "           Ciao Mondo!          ";
+        let result = text.trim();       // metodo trim pulisce gli spazi bianchi
+
+        document.getElementById("demo1").innerHTML = text;
+        document.getElementById("demo2").innerHTML = result;
+    </script>
+    <p>Con ECMAScript6 sono stati introdotti dei metodi di controllo: una serie di metodi che mi permettono di verificare se una stringa
+        inizia, finsce o contiene determinati caratteri</p>
+    <h3>Controllo se una stringa inizia con determinati caratteri -> metodo <code>startsWith</code></h3>
+    <script>
+        let str1 = 'Una frase qualsiasi';
+        console.log(str1.startsWith('Una fr'));    // risultati booleani   // risultato atteso true
+        // startsWith accetta due parametri, il secondo è opzionale, (cosa_cercare, posizione_in_cui_cercare)
+        console.log(str1.startsWith('Una', 3)); // risultato atteso è false -> Una non è nella posizione 3
+        // il secondo parametro indica la posizione iniziale in cui cercare, la prima lettera è 0
+
+        let str2 = 'To be, or not to be, this is the question';
+        console.log(str2.startsWith('To be'));          // true
+        console.log(str2.startsWith('not to be'));      // false
+        console.log(str2.startsWith('not to be', 10));  // true
+    </script>
+    <h3>Controllo se una stringa finisce con determinati caratteri - endsWith</h3>
+    <script>
+        let str3 = 'Rugby is best!';
+        console.log(str3.endsWith('best!'));    // true
+        console.log(str3.endsWith('best!', 14));// true
+        console.log(str3.endsWith('best'));     // false
+        // https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_endswith2
+    </script>
+    <h3>Controllo se una stringa contiene una determinata parola -> metodo <code>includes</code></h3>
+    <script>
+        let sentence = 'Il rugby è lo sport più bello del mondo';
+        let word = 'sport';
+        console.log(
+            `La parola "${word}" ${sentence.includes(word) ? 'è' : 'non è'} contenuta nella frase`
+        );
+        // la prima graffa {word} è semplicemente una variabile in un template literal
+        // nella seconda graffa ho l'operatore ternario
+        // com'era fatto l'operatore ternario? -> codizione true|false ? se true eseguo il primo blocco : se false eseguo il secondo
+
+        // "Squalo bianco".includes("squalo");                 // return false
+        // "Squalo bianco".toLowerCase().includes("squalo");   // return true
+        // il metodo includes è case sensitive
+
+        // includes(searchString)
+        // includes(searchString, position) // da dove inizio a cercare, valore di default 0
+        let str4 = 'To be, or not to be, this is the question';
+        console.log(str4.includes("To be"));                    // true
+        console.log(str4.includes("question"));                 // true
+        console.log(str4.includes("rugby"));                    // false
+        console.log(str4.includes("To be", 1));                 // false
+        console.log(str4.includes("TO BE"));                    // false
+    </script>
+</body>
+</html>

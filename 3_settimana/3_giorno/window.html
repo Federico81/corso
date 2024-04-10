@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window</title>
+</head>
+<body>
+    <h3>History</h3>
+    <p>History serve per fare la navigazione avanti|indietro nelle pagine</p>
+    <p><b>back</b></p>
+    <p>Cliccando su back tornerà alla scheda precedente nel browser</p>
+        <button onclick="history.back()">Go back</button>
+    <p>Se apro la pagina in una nuova scheda non succede niente perché non c'è nessuna scheda precedente,
+        ma se apro la pagina in una scheda che ha pagine precedenti tornerà indietro
+    </p>
+    <p><b>Forward</b></p>
+    <p>Cliccando su forward imiterà il comportamento freccina avanti del browser</p>
+        <button onclick="history.forward()">Go Forward</button>
+    <p><b>Go</b></p>
+    <p>Passa un parametro che mi dice di quanto muovermi</p>
+        <button onclick="history.go(+2)">Go Forward di 2 pagine</button>
+    
+    <h3>Open</h3>
+    <p>Metodo che usiamo per aprire nuove finestre nel browser</p>
+    <p>Clicca il bottone per aprire una nuova tab</p>
+    <button onclick="apri()">Prova</button>
+    <script>
+        function apri() {
+            window.open("https://epicode.com/en/")
+        }
+    </script>
+    <!-- close -->
+
+    <h3>MoveTo</h3>
+    <p>Apro una finestra e la sposto</p>
+    <p>Apro "myWindow" e la sposto di 500 x 100:</p>
+    <button onclick="openWin()">Apre "myWindow"</button>
+    <button onclick="moveWin()">Sposta "myWindow"</button>
+    <script>
+        let myWindow;
+        function openWin() {
+            myWindow.open("", "", "width=400, height=200")
+        }
+        function moveWin() {
+            myWindow.moveTo(500, 100);
+        }
+    </script>
+    <!-- window metodi per calcolare larghezza e altezza di una finestra .innerHeight .innerWidth-->
+    <!-- https://www.w3schools.com/jsref/obj_window.asp -->
+</body>
+</html>

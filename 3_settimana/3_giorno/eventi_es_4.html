@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventi esempio 4</title>
+</head>
+<body>
+    <p>Associo più eventi diversi allo stesso elemento (ad esempio un bottone click)</p>
+    <button id="btn">Cliccami</button>
+    <p id="para"></p>
+    <script>
+        function fun () {
+            btn.style.width = "50px";
+            btn.style.height = "50px";
+            btn.style.background = "black";
+            btn.style.color = "red"
+        }
+        function fun1 () {
+            document.getElementById("para").innerHTML = "Questa è la funzione al click"
+        }
+        function fun2 () {
+            btn.style.width = "";
+            btn.style.height = "";
+            btn.style.background = "";
+            btn.style.color = ""
+        }
+        var mybtn = document.getElementById("btn");
+        mybtn.addEventListener("mouseover", fun);
+        mybtn.addEventListener("click", fun1);
+        mybtn.addEventListener("mouseout", fun2);
+    </script>
+</body>
+</html>

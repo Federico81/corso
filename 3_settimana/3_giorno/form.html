@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <!-- creo un campo email e finché non ho verificato che nell'input c'è qualcosa tipo asd@fgh non posso cliccare sul bottone -->
+    <form id="signUpForm">
+        <input type="email" id="emailField" required>
+        <button id="okButton" disabled>OK</button>
+    </form>
+    <script>
+        const signUpForm = document.getElementById('signUpForm');
+        const emailField = document.getElementById('emailField');
+        const okButton = document.getElementById('okButton');
+
+        emailField.addEventListener('keyup', function (event) {
+            isValidEmail = emailField.checkValidity();
+
+            if ( isValidEmail ) {
+                okButton.disabled = false; 
+            } else {
+                okButton.disabled = true;
+            }
+        });
+
+        okButton.addEventListener('click', function(event) {
+            signUpForm.submit();
+        });
+    </script>
+</body>
+</html>

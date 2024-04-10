@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set interval e set timeout</title>
+</head>
+<body>
+    <h2>Set interval e set timeout</h2>
+    <p>Metodi che ci permettono di gestire attività differite nel tempo, faremo riferimento a timer (in millisecondi)</p>
+    <table>
+        <tr>
+            <th>Metodo</th>
+            <th>Descrizione</th>
+        </tr>
+        <tr>
+            <td>setInterval()</td>
+            <td>Esegue una funzione in base a un intervallo di tempo specificato</td>
+        </tr>
+        <tr>
+            <td>setTimeout()</td>
+            <td>Esegue una funzione dopo un intervallo di tempo specificato</td>
+        </tr>
+        <tr>
+            <td>clearInterval()</td>
+            <td>Azzera il timer creato con setInterval()</td>
+        </tr>
+        <tr>
+            <td>clearTimeout()</td>
+            <td>Azzera il timer creato con setTimeout()</td>
+        </tr>
+    </table>
+    <script>
+        // primo esempio -> uso setInterval -> mostrare qualcosa in console con un intervallo di tempo
+        function saluta() {
+            console.log('Ciao Mondo');
+        }
+        setInterval(saluta, 5000);  // primo parametro è la funzione, secondo parametro è l'intervallo in millisecondi
+
+        // secondo esempio -> uso setInterval -> combinato al costruttore date -> stampare l'orario ogni 5 secondi
+        function showTime() {
+            let dateTime = new Date();
+            let time = dateTime.toLocaleTimeString();   // return the time (string)
+            console.log(time);
+        }
+        let display = setInterval(showTime, 5000);
+
+        // terzo esempio -> uso setTimeout -> mostro un messaggio in console dopo un altro
+        function salutadue() {
+            console.log('Questo arriva dopo')
+        }
+        setTimeout(salutadue, 3000);
+        console.log('Questo arriva prima');
+
+        // quarto esempio -> uso setTimeout -> come l'esempio due ma mostro l'orario dopo un certo lasso di tempo
+        function showTimedue() {
+            let dateTimedue = new Date();
+            let timedue = dateTimedue.toLocaleTimeString();
+            console.log(timedue);
+            setTimeout(showTimedue, 7000);
+        }
+        showTimedue();
+    </script>
+</body>
+</html>

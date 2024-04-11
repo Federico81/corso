@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>EpiCalendar</title>
+</head>
+<body>
+    <div class="container">
+        <main>
+            <!-- calendario, form -->
+            <h1></h1>
+            <div id="calendar">
+                <!-- le celle dei giorni verrano generate via JS e posizionate qui! -->
+            </div>
+            <div id="addMeeting">
+                <div>
+                    <h4>Meeting day</h4>
+                    <span id="newMeetingDay">Click on a day</span>
+                </div>
+                <form>
+                    <div>
+                        <h4>Meeting Time</h4>
+                        <input type="time" required id="newMeetingTime">
+                    </div>
+                    <div>
+                        <input
+                        type="text"
+                        required
+                        id="newMeetingName"
+                        placeholder="Insert a name for the meeting"
+                        >
+                    </div>
+                    <div>
+                        <h4>Add</h4>
+                        <button type="submit">Save Meeting</button>
+                    </div>
+                </form>
+            </div>
+        </main>
+        <section>
+            <!-- Sezione per mostrare gli appuntamenti esistenti -->
+            <div id="appointments">
+                <h2>Appointements of the day</h2>
+                <ul>
+                    <!-- nel caso vi siano appunutamenti da mostrare, verrano generati da JS dei <li> e posizionati qui-->
+                </ul>
+            </div>
+        </section>
+    </div>
+    <script src="./js/index.js"></script>
+</body>
+</html>
